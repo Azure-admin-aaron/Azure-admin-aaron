@@ -12,7 +12,7 @@
 .mock-page nav .nav-contact{margin-left:4px;padding:12px 20px;border-radius:6px;background:#075cea;color:#fff;box-shadow:0 3px 7px #075cea22}
 .mock-hero{position:relative;height:494px;display:grid;grid-template-columns:54% 46%;overflow:hidden}
 .mock-hero-copy{z-index:2;padding:75px 0 0 51px}
-.mock-hero h1{font-weight:800;font-size:clamp(52px,6vw,69px);line-height:1.01;margin:16px 0 20px;white-space:nowrap}
+.mock-hero h1{font-weight:800;font-size:clamp(44px,5.5vw,64px);line-height:1.01;margin:16px 0 20px;white-space:normal}
 .mock-hero h1 span{color:#065ce8}
 .mock-hero .hero-description{width:430px;max-width:94%;font-size:18px;line-height:1.46;color:#596275;margin:0}
 .mock-actions{display:flex;align-items:center;gap:29px;margin-top:24px}
@@ -33,7 +33,7 @@
 .proof-item svg{width:39px;height:39px;flex:none;color:#075cea}
 .proof-item p{display:flex;flex-direction:column;gap:3px;margin:0}
 .proof-item strong{font-size:14px;line-height:1.1;font-weight:600;color:#112544}
-.proof-item small{font-size:12px;color:#7b8494}
+.proof-item small{font-size:12px;color:#596579}
 .expertise-band{background:#102a49;color:#fff;padding:54px 0 61px}
 .expertise-band>.mock-container{padding:0 52px}
 .expertise-band .eyebrow{color:#68aaff}
@@ -44,7 +44,7 @@
 .expertise-columns article{border-left:1px solid #ffffff38;padding:0 25px;min-width:0}
 .expertise-columns article:first-child{border-left:0;padding-left:0}
 .expertise-columns article:last-child{padding-right:0}
-.column-heading{display:flex;align-items:center;gap:10px;min-height:31px;margin-bottom:16px;white-space:nowrap}
+.column-heading{display:flex;align-items:center;gap:10px;min-height:31px;margin-bottom:16px;white-space:normal}
 .column-heading svg{width:39px;height:39px;flex:none;color:#69a5ff;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linejoin:round;stroke-linecap:round}
 .column-heading svg circle,.column-heading svg path[fill="currentColor"]{fill:currentColor;stroke:none}
 .column-heading h3{font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:-.01em;margin:0}
@@ -60,7 +60,50 @@
 .project-photo{width:100%;height:330px;object-fit:cover;object-position:center;display:block}
 .closing-contact{padding:24px 55px 48px;border-top:1px solid #e4e8ef}
 .closing-contact h2{font-size:30px;margin:0 0 8px}.closing-contact p{color:var(--body);margin:0 0 17px}
-.mock-footer{border-top:1px solid #e4e8ef;padding:18px 55px 25px;color:#778296;font-size:12px}
+.mock-footer{border-top:1px solid #e4e8ef;padding:18px 55px 25px;color:#596579;font-size:12px}
 @media(max-width:850px){.mock-hero{grid-template-columns:54% 46%}.mock-hero h1{font-size:clamp(44px,6.3vw,60px)}.mock-hero-copy{padding-left:34px}.header-inner,.mock-proof,.expertise-band>.mock-container{padding-left:34px;padding-right:34px}.expertise-intro{gap:20px}.expertise-intro h2{font-size:33px}.expertise-columns article{padding:0 12px}.column-heading{white-space:normal;gap:5px}.column-heading svg{width:30px;height:30px}.column-heading h3{font-size:12px}.featured-project{padding-left:34px;padding-right:34px;gap:20px}.featured-project h2{font-size:28px}}
 @media(max-width:650px){.mock-header{height:auto;min-height:63px}.header-inner{padding:17px 20px;align-items:flex-start;gap:16px;flex-wrap:wrap}.mock-page nav{gap:18px;flex-wrap:wrap}.mock-page nav a{font-size:12px}.mock-page nav .nav-home{padding:0 0 5px}.mock-page nav .nav-contact{padding:7px 11px;margin-top:-7px}.mock-hero{height:auto;display:flex;flex-direction:column}.mock-hero-copy{padding:45px 20px 32px}.mock-hero h1{font-size:clamp(39px,8.5vw,56px);white-space:normal}.mock-hero .hero-description{font-size:16px;max-width:100%}.hero-photo{height:410px}.hero-photo:before{background:linear-gradient(180deg,#fff 0%,#ffffff00 13%)}.handwritten{top:auto;bottom:310px;right:30px}.mock-proof{height:auto;grid-template-columns:1fr;padding:18px 20px;gap:15px}.proof-item,.proof-item:first-child{border-left:0;padding:0}.expertise-band{padding:47px 0}.expertise-band>.mock-container{padding:0 20px}.expertise-intro{display:block;margin-bottom:26px}.expertise-intro h2{font-size:32px}.expertise-intro>p{font-size:15px}.expertise-columns{grid-template-columns:repeat(2,1fr);gap:27px 14px}.expertise-columns article,.expertise-columns article:first-child{border-left:1px solid #ffffff38;padding:0 0 0 12px}.column-heading{margin-bottom:9px}.featured-project{grid-template-columns:1fr;padding:44px 20px;gap:28px}.featured-project h2{font-size:30px}.project-results{gap:5px}.project-results>div{flex-wrap:wrap}.project-photo{height:auto;aspect-ratio:1.2}.closing-contact{padding:35px 20px}.mock-footer{padding-inline:20px}}
 @media(max-width:400px){.mock-page nav{gap:12px}.mock-page nav a{font-size:11px}.mock-hero h1{font-size:38px}.mock-actions{gap:15px}.mock-button,.mock-link{font-size:12px}.project-results svg{width:27px;height:27px}.project-results span{font-size:11px}}
+
+/* Keep the secondary portfolio view consistent with the homepage controls. */
+.mock-actions{flex-wrap:wrap}
+.mock-link{min-height:44px}
+.mock-page .mock-button .sr-only{font-size:1px}
+.mock-footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mock-footer a{display:inline-flex;align-items:center;min-height:44px;color:#005cc8}
+.mock-page nav a:hover{color:#0059c8}
+.mock-page nav .nav-contact:hover{background:#004bc4;color:#fff}
+@media(min-width:651px) and (max-width:1000px){
+ .mock-hero h1{font-size:clamp(36px,5.4vw,54px)}
+ .mock-hero-copy{padding-top:60px}
+ .mock-hero .hero-description{font-size:16px}
+ .expertise-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+ .expertise-columns article:nth-child(3){border-left:0;padding-left:0}
+ .column-heading h3{font-size:15px}
+ .expertise-columns p{font-size:14px}
+ .proof-item{padding-left:16px;gap:10px}
+ .proof-item small{line-height:1.5}
+ .project-results{grid-template-columns:1fr;gap:14px}
+ .project-results>div{align-items:center}
+ .project-results br{display:none}
+}
+@media(max-width:650px){
+ .header-inner{align-items:center;gap:8px}
+ .mock-page nav{gap:16px;align-items:center}
+ .mock-page nav a{font-size:13px}
+ .mock-page nav .nav-contact{min-height:44px;margin:0}
+ .mock-page .brand{padding-block:8px}
+ .hero-photo{height:360px}
+ .handwritten{bottom:260px}
+ .expertise-columns p{font-size:14px}
+ .column-heading{align-items:flex-start}
+ .column-heading h3{font-size:14px}
+ .project-results{gap:16px}
+ .project-results>div{flex-direction:column}
+ .project-results span{font-size:12px}
+}
+@media(max-width:380px){
+ .expertise-columns{grid-template-columns:1fr}
+ .mock-actions{gap:16px}
+ .mock-button,.mock-link{font-size:14px}
+}
