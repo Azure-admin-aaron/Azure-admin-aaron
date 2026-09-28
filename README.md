@@ -1,9 +1,20 @@
-- 👋 Hi, I’m Aaron
-- 👀 I’m interested in Azure administrartion and Dev-ops
-- 🌱 I’m currently learning Powershell and Python
-- 💞️ I’m looking to collaborate on Docker and AKS
+# Hi, I'm Aaron 👋
 
-<!---
-Azure-admin-aaron/Azure-admin-aaron is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+I work at the intersection of Azure cloud engineering, identity, automation, and AI. I enjoy turning complicated systems into secure, repeatable solutions that other teams can build on.
+
+At work, I help shape Azure infrastructure and governance, automate operational work, and explore practical ways to bring AI agents into enterprise workflows. I care as much about clear handoffs and useful developer experiences as I do about the technology itself.
+
+### What I'm working on
+
+- **Azure foundations:** landing zones, infrastructure as code, cost visibility, and developer access.
+- **Identity and security:** Microsoft Entra ID, Okta, Microsoft 365, and Intune.
+- **AI and automation:** Copilot, agent governance, MCP integrations, and tools that make everyday work easier.
+
+### Public projects
+
+- [Pironman5](https://github.com/Azure-admin-aaron/pironman5) — Raspberry Pi hardware and display work.
+- [Docker](https://github.com/Azure-admin-aaron/docker) — my Docker repository.
+
+**AZ-104 certified · AZ-305 in progress**
+
+[Connect with me on GitHub](https://github.com/Azure-admin-aaron)
