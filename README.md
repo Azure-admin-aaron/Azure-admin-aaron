@@ -10,8 +10,4 @@ At work, I help shape Azure infrastructure and governance, automate operational 
 - **Identity and security:** Microsoft Entra ID, Okta, Microsoft 365, and Intune.
 - **AI and automation:** Copilot, agent governance, MCP integrations, and tools that make everyday work easier.
 
-### Public project
-
-- [Pironman5](https://github.com/Azure-admin-aaron/pironman5) — Raspberry Pi hardware and display work.
-
 **AZ-104 certified · AZ-305 in progress**
