@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 .mock-page{--ink:#080f2a;--blue:#075cea;--body:#596275;color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
 .mock-container{width:min(1024px,100%);margin-inline:auto}
 .mock-page h1,.mock-page h2,.mock-page h3{font-family:'Manrope',Arial,sans-serif;letter-spacing:-.05em}
@@ -22,8 +23,9 @@
 .mock-button span,.mock-link span{font-size:22px;line-height:.7;font-weight:400}
 .hero-photo{position:relative;height:100%;overflow:hidden;background:#f3f3f1}
 .hero-photo:before{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#fff 0%,#ffffff00 20%);pointer-events:none}
+.hero-photo:after{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(270deg,#ffffffac 0%,#ffffff00 22%);pointer-events:none}
 .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 26%}
-.handwritten{z-index:3;position:absolute;right:37px;top:150px;transform:rotate(-9deg);font:italic 20px/1.25 cursive;color:#0b1630;margin:0;text-align:center;text-shadow:0 1px #fff}
+.handwritten{z-index:3;position:absolute;right:37px;top:150px;transform:rotate(-9deg);font:500 26px/1 'Caveat',cursive;color:#0b1630;margin:0;text-align:center}
 .handwritten span{display:block;width:50px;border-bottom:1px solid currentColor;transform:rotate(-11deg);margin:3px auto 0}
 .mock-proof{height:106px;display:grid;grid-template-columns:1fr 1fr 1.3fr;align-items:center;padding:0 52px}
 .proof-item{display:flex;align-items:center;gap:15px;min-width:0;padding-left:30px;border-left:1px solid #d9e0e8}
