@@ -74,6 +74,10 @@
 .mock-page nav a:hover{color:#0059c8}
 .mock-page nav .nav-contact:hover{background:#004bc4;color:#fff}
 @media(min-width:651px) and (max-width:1000px){
+ .mock-hero{height:auto;min-height:494px}
+ .hero-photo{height:auto;align-self:stretch}
+ .hero-photo img{position:absolute;inset:0}
+ .mock-hero-copy{padding-bottom:40px}
  .mock-hero h1{font-size:clamp(36px,5.4vw,54px)}
  .mock-hero-copy{padding-top:60px}
  .mock-hero .hero-description{font-size:16px}
