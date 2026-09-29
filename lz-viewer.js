@@ -35,24 +35,21 @@
 
   function show(i) {
     current = i;
-    const whole = i < 0;
-    const v = whole ? { left: 0, top: 0, w: W, h: H } : fit(spots[i].box);
+    const v = fit(spots[i].box);
     canvas.style.width = `${W / v.w * 100}%`;
     canvas.style.left = `${-v.left / v.w * 100}%`;
     canvas.style.top = `${-v.top / v.h * 100}%`;
     layer.querySelectorAll('.lz-marker').forEach((m, j) => m.classList.toggle('is-active', j === i));
-    kicker.textContent = whole ? 'Azure landing zone · hub and spoke' : `${i + 1} of ${spots.length}`;
-    title.textContent = whole ? 'The whole diagram' : spots[i].title;
-    dialog.classList.toggle('is-whole', whole);
-    work.replaceChildren(...(whole ? [] : spots[i].work).map(item => {
+    kicker.textContent = `${i + 1} of ${spots.length}`;
+    title.textContent = spots[i].title;
+    work.replaceChildren(...spots[i].work.map(item => {
       const li = document.createElement('li');
       li.textContent = item;
       return li;
     }));
-    text.textContent = whole ? 'Select a number below the diagram, or use Previous and Next, to zoom into where my work fits.' : spots[i].text;
-    prev.disabled = i <= 0 && !whole ? true : false;
+    text.textContent = spots[i].text;
+    prev.disabled = i === 0;
     next.disabled = i === spots.length - 1;
-    if (whole) prev.disabled = true;
   }
 
   function open(i) {
@@ -60,13 +57,25 @@
     if (!dialog.open) dialog.showModal();
   }
 
-  document.querySelectorAll('.lz-spot, .lz-marker, .lz-open').forEach(el => {
+  // Close the zoom and bring the full diagram on the page into view.
+  function showWhole() {
+    dialog.close();
+    const frame = document.querySelector('.lz-frame');
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    frame.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+    frame.focus({ preventScroll: true });
+    frame.classList.remove('is-flash');
+    void frame.offsetWidth;
+    frame.classList.add('is-flash');
+  }
+
+  document.querySelectorAll('.lz-spot, .lz-marker').forEach(el => {
     if (el.closest('.lz-dialog')) return;
     el.addEventListener('click', () => open(+el.dataset.lz));
   });
   prev.addEventListener('click', () => show(Math.max(current - 1, 0)));
   next.addEventListener('click', () => show(Math.min(current + 1, spots.length - 1)));
-  dialog.querySelector('.lz-d-all').addEventListener('click', () => show(-1));
+  dialog.querySelector('.lz-d-all').addEventListener('click', showWhole);
   dialog.querySelector('.lz-d-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
   dialog.addEventListener('keydown', e => {
