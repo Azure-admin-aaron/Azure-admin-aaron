@@ -23,7 +23,6 @@
 .mock-button span,.mock-link span{font-size:22px;line-height:.7;font-weight:400}
 .hero-photo{position:relative;height:100%;overflow:hidden;background:#f3f3f1}
 .hero-photo:before{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#fff 0%,#ffffff00 20%);pointer-events:none}
-.hero-photo:after{content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(270deg,#ffffffac 0%,#ffffff00 22%);pointer-events:none}
 .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 10%}
 .handwritten{z-index:3;position:absolute;right:37px;bottom:130px;transform:rotate(-9deg);font:700 30px/1 'Caveat',cursive;color:#fff;margin:0;text-align:center;text-shadow:0 1px 2px #0b163099,0 0 10px #0b163080}
 .handwritten span{display:block;width:50px;border-bottom:2px solid currentColor;box-shadow:0 1px 3px #0b163099;transform:rotate(-11deg);margin:3px auto 0}
