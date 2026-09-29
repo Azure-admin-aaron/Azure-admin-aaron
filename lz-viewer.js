@@ -32,41 +32,40 @@
     canvas.insertBefore(copy, layer);
   }
 
-  // Hover to magnify the page diagram around the pointer (mouse and trackpad only).
+  // Magnifier: off by default so the whole diagram stays in view. The button turns it on;
+  // while on, the view follows the pointer. Escape or the button turns it off.
   const stage = document.querySelector('.lz-stage');
   const stageCanvas = stage && stage.querySelector('.lz-canvas');
-  const fine = matchMedia('(hover: hover) and (pointer: fine)');
-  const ZOOM = 2.2;
-  let pointer = null, frame = 0;
+  const toggle = document.querySelector('.lz-magnify');
+  const ZOOM = 2;
+  let on = false, pointer = null, frame = 0;
 
   function pan() {
     frame = 0;
-    if (!pointer) return;
+    if (!on || !pointer) return;
     const r = stage.getBoundingClientRect();
     const x = Math.min(Math.max(pointer.x - r.left, 0), r.width);
     const y = Math.min(Math.max(pointer.y - r.top, 0), r.height);
     stageCanvas.style.transform = `translate(${x * (1 - ZOOM)}px, ${y * (1 - ZOOM)}px)`;
   }
 
-  if (stage && stageCanvas) {
-    stage.classList.toggle('is-zoomable', fine.matches);
-    fine.addEventListener('change', () => stage.classList.toggle('is-zoomable', fine.matches));
-    stage.addEventListener('pointerenter', e => {
-      if (!fine.matches || e.pointerType !== 'mouse') return;
-      pointer = { x: e.clientX, y: e.clientY };
-      stageCanvas.style.width = `${ZOOM * 100}%`;
-      pan();
-    });
+  function magnify(state) {
+    on = state;
+    stage.classList.toggle('is-zoomed', on);
+    toggle.setAttribute('aria-pressed', String(on));
+    toggle.textContent = on ? 'Show whole diagram' : 'Magnify';
+    stageCanvas.style.width = on ? `${ZOOM * 100}%` : '';
+    if (on && !pointer) { const r = stage.getBoundingClientRect(); pointer = { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }
+    if (on) pan(); else stageCanvas.style.transform = '';
+  }
+
+  if (stage && stageCanvas && toggle) {
+    toggle.addEventListener('click', () => magnify(!on));
     stage.addEventListener('pointermove', e => {
-      if (!pointer) return;
       pointer = { x: e.clientX, y: e.clientY };
-      if (!frame) frame = requestAnimationFrame(pan);
+      if (on && !frame) frame = requestAnimationFrame(pan);
     });
-    stage.addEventListener('pointerleave', () => {
-      pointer = null;
-      stageCanvas.style.width = '';
-      stageCanvas.style.transform = '';
-    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && on) magnify(false); });
   }
 
   // Expand a box (in % of the diagram) to the diagram's aspect ratio, kept inside the edges.
