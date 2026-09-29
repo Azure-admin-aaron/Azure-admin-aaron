@@ -3,115 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="I’m Aaron Petty, an Azure cloud engineer. I build Azure foundations with Bicep and GitHub, work alongside development teams, and help people adopt AI responsibly.">
-  <title>Aaron Petty — Cloud Engineering & Responsible AI</title>
-  <link rel="stylesheet" href="styles.css?v=4">
-  <link rel="stylesheet" href="navigation.css?v=1">
-  <script src="navigation.js?v=1" defer></script>
-  <script src="lz-viewer.js?v=5" defer></script>
+  <meta name="description" content="I’m Aaron Petty, an Azure cloud engineer. I build Azure foundations with my team, work alongside developers, and help people adopt AI responsibly.">
+  <title>Aaron Petty — Azure Cloud Engineer</title>
+  <link rel="stylesheet" href="styles.css?v=4"><link rel="stylesheet" href="contact.css?v=5">
+  <link rel="stylesheet" href="navigation.css?v=2">
+  <script src="navigation.js?v=2" defer></script>
 </head>
-<body>
+<body class="mock-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="portfolio-header">
     <div class="navigation-inner">
       <a class="portfolio-brand" href="index.html" aria-label="Aaron Petty, home">Aaron Petty</a>
-      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-        <span>Menu</span>
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path class="menu-bars" d="M3 5h14M3 10h14M3 15h14"/><path class="menu-close" d="m5 5 10 10M15 5 5 15"/></svg>
-      </button>
       <nav class="portfolio-nav" id="main-navigation" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
-        <a href="contact.html">About</a>
-        <a href="contact.html#about">Expertise</a>
-        <a href="contact.html#projects">Work</a>
-        <a class="navigation-contact" href="contact.html#contact">Contact</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#expertise">Expertise</a>
+        <a class="navigation-contact" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <section class="hero wrap" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">I make cloud<br>work better<br><span>for people.</span></h1>
-        <p>I’m Aaron Petty. I bring structure to complex Azure environments and work with the people building on them. From Bicep deployments to AI adoption, I care about making the next step easier for my team.</p>
-        <div class="actions">
-          <a class="button" href="#work">View work <span aria-hidden="true">→</span></a>
-          <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
-        </div>
+    <section class="mock-hero mock-container" id="top" aria-labelledby="hero-title">
+      <div class="mock-hero-copy"><p class="eyebrow">AZURE CLOUD ENGINEER</p>
+        <h1 id="hero-title">I build with<br><span>people in mind.</span></h1>
+        <p class="hero-description">I’m Aaron. I like untangling cloud challenges, building alongside my teammates, and helping people take the next step. Azure is where I do much of that work.</p>
+        <div class="mock-actions"><a class="mock-button" href="work.html">See My Work <span aria-hidden="true">→</span></a><a class="mock-link" href="#contact">Get in Touch <span aria-hidden="true">→</span></a></div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <img src="hero-graphic.svg" width="480" height="460" alt="" decoding="async" fetchpriority="high">
+      <div class="hero-photo"><img src="aaron-headshot-outdoors.jpeg" width="1086" height="1448" alt="Aaron Petty" fetchpriority="high"></div>
+      <p class="handwritten" aria-hidden="true">Hi, I’m<br>Aaron.<span></span></p>
+    </section>
+    <section class="mock-proof mock-container" aria-label="Highlights">
+      <div class="proof-item"><svg class="azure-mark" viewBox="0 0 96 96" role="img" aria-label="Azure"><path fill="#0078D4" fill-rule="evenodd" clip-rule="evenodd" d="M28.1854 10.081C29.0086 7.64193 31.2961 5.99976 33.8703 5.99976H36.9987H38.4459L38.446 6.00005H62.1284C64.7027 6.00005 66.9901 7.64222 67.8133 10.0813L92.1131 82.0807C93.4258 85.97 90.533 89.9994 86.4282 89.9994H59.0001V89.973C58.8125 89.9904 58.6218 89.9994 58.4285 89.9994H58.3233C57.0345 89.9994 55.7799 89.5844 54.7454 88.8158L36.4266 75.2076L32.812 85.9178C31.9888 88.3569 29.7014 89.9991 27.1271 89.9991H9.57056C5.46579 89.9991 2.57303 85.9697 3.88564 82.0804L28.1854 10.081ZM23.4277 60.5684L57.1306 85.6049C57.4755 85.8611 57.8937 85.9994 58.3233 85.9994H58.4285C59.7967 85.9994 60.761 84.6563 60.3234 83.3598L46.9041 43.5989L41.2017 58.759L40.7142 60.0549H39.3297H22.7397L23.4277 60.5684ZM86.4282 85.9994H64.0881C64.5181 84.7919 64.568 83.4279 64.1134 82.0807L39.8136 10.0813C39.8044 10.0541 39.795 10.027 39.7855 10H62.1284C62.9865 10 63.749 10.5474 64.0234 11.3604L88.3232 83.3598C88.7607 84.6563 87.7965 85.9994 86.4282 85.9994Z"/></svg><p><strong>Microsoft Certified</strong><small>Azure Administrator</small></p></div>
+      <div class="proof-item"><svg viewBox="0 0 48 43" aria-hidden="true"><path fill="currentColor" d="M12 36a11 11 0 0 1-1-22 15 15 0 0 1 29 4 9 9 0 0 1-1 18z"/></svg><p><strong>Infrastructure as Code</strong><small>Bicep · GitHub · CI/CD</small></p></div>
+      <div class="proof-item"><svg viewBox="0 0 44 44" aria-hidden="true"><path fill="currentColor" d="M3 29h8v12H3zm13-9h8v21h-8zm13-13h8v34h-8z"/></svg><p><strong>Built Together</strong><small>Cloud + development teams</small></p></div>
+    </section>
+    <section class="expertise-band" id="expertise" aria-labelledby="expertise-title"><div class="mock-container">
+      <div class="expertise-intro"><div><p class="eyebrow">EXPERTISE</p><h2 id="expertise-title">I care about what<br>happens after delivery.</h2></div><p>A cloud foundation matters when people can use it. I work on the infrastructure, the access, and the conversations that help teams build with confidence.</p></div>
+      <div class="expertise-columns">
+        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M13 33H9a8 8 0 0 1-1-16 12 12 0 0 1 23 2 7 7 0 0 1 1 14H13z"/></svg><h3>Azure Infrastructure</h3></div><p>I help shape landing zones and resource standards.</p><p>I set up the networking and private DNS that let services find each other.</p><p>I manage Front Door endpoints and help teams make sense of Firewall rules.</p></article>
+        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path fill="currentColor" d="m19 3-1 5-4 2-5-2-5 8 4 4v5l-4 3 5 9 5-3 4 2 1 5h10l1-5 4-2 5 3 5-9-4-3v-5l4-4-5-8-5 2-4-2-1-5zm5 13a7 7 0 1 1 0 14 7 7 0 0 1 0-14" fill-rule="evenodd" transform="translate(-2 -1) scale(.92)"/></svg><h3>Automation &amp; IaC</h3></div><p>I build Bicep templates with my team.</p><p>I help run deployments through GitHub workflows.</p><p>Repeatable deployments mean fewer surprises.</p></article>
+        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="m22 4 14 5v10c0 10-7 17-14 21C15 36 8 29 8 19V9zM22 9v25m0-12 12-8"/></svg><h3>Identity &amp; AI</h3></div><p>I audit identity and access.</p><p>I’m helping roll out Microsoft Copilot.</p><p>I make sure safe AI use stays part of the plan.</p></article>
+        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="11" r="5"/><circle cx="8" cy="16" r="4"/><circle cx="36" cy="16" r="4"/><path d="M12 32v-5c0-5 4-9 10-9s10 4 10 9v5zm-11 1v-7c0-4 3-7 7-7 2 0 4 1 5 2-3 3-4 6-4 11zm42 0H35v-1c0-5-1-8-4-11 1-1 3-2 5-2 4 0 7 3 7 7z"/></svg><h3>Collaboration</h3></div><p>I work directly with developers.</p><p>I support application and database deployment.</p><p>I help teammates understand firewall rules.</p></article>
+      </div>
+    </div></section>
+    <section class="featured-project mock-container" id="story" aria-labelledby="project-title">
+      <div class="project-copy"><p class="eyebrow">A STORY FROM MY WORK</p><h2 id="project-title">From unclear resources to a shared foundation.</h2>
+        <p>Our Azure environment had limited documentation, and it was hard to tell what resources were for. With my cloud team, I helped reshape it around landing zones, shared Bicep templates, and GitHub deployment workflows, then partnered with developers as they moved in.</p>
+        <div class="project-results">
+          <div><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14"/><path d="M18 8v11l7 4"/></svg><span>Clearer <br>resources at a glance</span></div>
+          <div><svg viewBox="0 0 36 36" aria-hidden="true"><path d="m18 3 12 5v9c0 8-5 13-12 17C11 30 6 25 6 17V8z"/></svg><span>Bicep &amp; GitHub <br>deployments we share</span></div>
+          <div><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="9" r="4"/><circle cx="6" cy="13" r="3"/><circle cx="30" cy="13" r="3"/><path fill="currentColor" stroke="none" d="M10 30v-8c0-4 3-7 8-7s8 3 8 7v8zm-10 0v-7c0-4 2-6 6-6 2 0 3 1 4 2-2 2-3 5-3 9v2zm36 0h-7v-2c0-4-1-7-3-9 1-1 2-2 4-2 4 0 6 2 6 6z"/></svg><span>Cloud + dev <br>building side by side</span></div>
+        </div>
+        <div class="mock-actions"><a class="mock-button" href="work.html">See the work <span aria-hidden="true">→</span></a><a class="mock-link" href="https://github.com/Azure-admin-aaron" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+      </div>
+      <img class="project-photo" src="azure-building.jpg" width="1000" height="750" alt="Modern blue glass office building representing Azure platform work" loading="lazy">
+    </section>
+    <section class="work-detail current-focus mock-container" aria-labelledby="focus-title">
+      <p class="eyebrow">WHAT I’M WORKING ON NOW</p>
+      <h2 id="focus-title">Making AI safe and useful at work.</h2>
+      <div class="contribution-grid">
+        <article><h3>Copilot and AI enablement</h3><p>I’m helping roll out Microsoft Copilot and enable AI use across the organization. The work is ongoing, and I’m focused on helping people use these tools safely, with governance built into the approach.</p></article>
+        <article><h3>Identity and access</h3><p>I also audit identity and access management. Understanding who has access, and how that access is managed, is part of making cloud and AI adoption safe for everyone.</p></article>
       </div>
     </section>
-
-    <section class="work work-wide wrap section-rule" id="work" aria-labelledby="work-title">
-      <div class="work-copy">
-        <p class="section-label">A story from my work</p>
-        <h2 id="work-title">Making room to build.</h2>
-        <p>Our Azure environment needed clearer structure and resource identification. Together with my cloud team, I helped reshape it around landing zones, shared Bicep templates, and GitHub deployment workflows.</p>
-        <p>My pieces were naming and tagging, networking, private DNS, and Azure Front Door. Then I partnered directly with developers as they began deploying applications and databases into the new environment.</p>
-        <a class="text-link" href="contact.html#projects">Read the full story <span aria-hidden="true">→</span></a>
-      </div>
-      <ol class="lz-legend" aria-label="Where my work fits in the landing zone model">
-        <li><button type="button" class="lz-spot" data-lz="0" data-x="35.0" data-y="7.95" data-box="27.7,3.5,65.2,22" data-what="The top of the structure. Management groups organize subscriptions so access, policy and cost rules apply consistently to everything below them." data-work="Worked with my cloud team to shape the hierarchy for the platform, management, online and corporate landing zones|Audited identity and access: who holds which roles, and how that access is granted"><strong>Management groups</strong> Landing zone hierarchy and access audits</button></li>
-        <li><button type="button" class="lz-spot" data-lz="1" data-x="33.0" data-y="32.3" data-box="27.7,21,65.2,35" data-what="Each platform function and workload gets its own subscription: a security and billing boundary that sits under the right management group." data-work="Helped introduce naming and tagging conventions aligned with Microsoft&#x27;s Cloud Adoption Framework, so it&#x27;s easy to tell what each subscription and resource is for"><strong>Subscriptions</strong> Naming and tagging standards</button></li>
-        <li><button type="button" class="lz-spot" data-lz="2" data-x="71.8" data-y="6.5" data-box="66,2,88,28" data-what="The platform defined as code: a Git repository and deployment pipelines that roll out the landing zones, roles and policies." data-work="Built the Bicep templates together with the team|Contributed to the GitHub deployment workflows (CI/CD) that deploy the environment|Set up private GitHub runners inside Azure so CI/CD pipelines can deploy to resources behind private endpoints"><strong>Platform DevOps</strong> Bicep, GitHub workflows and private runners</button></li>
-        <li><button type="button" class="lz-spot" data-lz="3" data-x="8.1" data-y="35.4" data-box="1,32,23,56" data-what="A dedicated home for security logs and monitoring, kept separate so security data stays protected and easy to review." data-work="Set up CrowdStrike SIEM to collect Azure monitoring data and diagnostic logs|Used Microsoft Defender for Cloud for security monitoring"><strong>Security subscription</strong> CrowdStrike SIEM and Defender for Cloud</button></li>
-        <li><button type="button" class="lz-spot" data-lz="4" data-x="8.4" data-y="58.1" data-box="1,55,23,87" data-what="Shared operations tooling for the whole platform: logs, dashboards, alerts and cost reporting." data-work="Built dashboards and Log Analytics queries|Set up alert rules and action groups so the right people are notified|Applied our tagging standard so costs can be reported by team and application"><strong>Management subscription</strong> Dashboards, alerts and cost tagging</button></li>
-        <li><button type="button" class="lz-spot" data-lz="5" data-x="36.3" data-y="37.9" data-box="29.5,35,51,62" data-what="The network hub every workload connects through. The firewall, DNS and gateways live here and are shared by all landing zones." data-work="Configured virtual networks and VNet peering|Configured private DNS zones and records so services can find each other privately|Worked through Azure Firewall rule collections and rules with teammates"><strong>Connectivity hub</strong> VNets, peering, private DNS and firewall rules</button></li>
-        <li><button type="button" class="lz-spot" data-lz="6" data-x="37.3" data-y="69.3" data-box="29.5,66,51,88" data-what="A landing zone where the platform team runs its own shared services, the same way application teams run theirs." data-work="Hosted the private GitHub runners here, so CI/CD pipelines can deploy to resources behind private endpoints|Deployed them with the team&#x27;s Bicep templates and GitHub workflows"><strong>Platform landing zone (P1)</strong> Private GitHub runners, deployed as code</button></li>
-        <li><button type="button" class="lz-spot" data-lz="7" data-x="59.4" data-y="37.4" data-box="52,34,74,90" data-what="Where application teams run their workloads. Online is for internet-facing apps; Corp is for internal apps that connect to company networks." data-work="Worked with developers deploying applications into the Online zone|Set up databases in the Corp zone|Created Azure Front Door and managed its endpoints|Stayed involved as developers began using the environment"><strong>Application landing zone</strong> App and database deployments, Front Door</button></li>
-        <li><button type="button" class="lz-spot" data-lz="8" data-x="80.7" data-y="37.5" data-box="74,34,95,59" data-what="An isolated space for testing ideas, kept apart from production networks and data." data-work="Set up sandbox subscriptions so people can experiment safely"><strong>Sandbox</strong> Sandbox subscriptions for safe experiments</button></li>
-      </ol>
-      <figure class="lz-figure">
-        <div class="lz-frame" tabindex="-1">
-          <img src="landing-zone-hub-spoke.svg?v=2" width="3693" height="1718" loading="lazy" decoding="async" alt="Microsoft's Azure landing zone reference architecture using a hub and spoke network: management groups, platform subscriptions for security, management and connectivity, and application landing zones for corp and online workloads.">
-          <div class="lz-markers"><button type="button" class="lz-marker" data-lz="0" style="left:35.0%;top:7.95%" aria-label="Zoom to 1: Management groups">1</button><button type="button" class="lz-marker" data-lz="1" style="left:33.0%;top:32.3%" aria-label="Zoom to 2: Subscriptions">2</button><button type="button" class="lz-marker" data-lz="2" style="left:71.8%;top:6.5%" aria-label="Zoom to 3: Platform DevOps">3</button><button type="button" class="lz-marker" data-lz="3" style="left:8.1%;top:35.4%" aria-label="Zoom to 4: Security subscription">4</button><button type="button" class="lz-marker" data-lz="4" style="left:8.4%;top:58.1%" aria-label="Zoom to 5: Management subscription">5</button><button type="button" class="lz-marker" data-lz="5" style="left:36.3%;top:37.9%" aria-label="Zoom to 6: Connectivity hub">6</button><button type="button" class="lz-marker" data-lz="6" style="left:37.3%;top:69.3%" aria-label="Zoom to 7: Platform landing zone (P1)">7</button><button type="button" class="lz-marker" data-lz="7" style="left:59.4%;top:37.4%" aria-label="Zoom to 8: Application landing zone">8</button><button type="button" class="lz-marker" data-lz="8" style="left:80.7%;top:37.5%" aria-label="Zoom to 9: Sandbox">9</button></div>
-        </div>
-        <figcaption>The Azure landing zone model (hub and spoke) our zones were based on. Select a number to see what each part does and what I did there.<br>Diagram © Microsoft, adapted from the <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank" rel="noopener noreferrer">Cloud Adoption Framework</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Sections removed and numbered markers added.</figcaption>
-      </figure>
-      <dialog class="lz-dialog" aria-labelledby="lz-d-title">
-        <div class="lz-d-head">
-          <div><p class="lz-d-kicker"></p><h3 id="lz-d-title"></h3><p class="lz-d-text"></p></div>
-          <button type="button" class="lz-d-close" aria-label="Close">×</button>
-        </div>
-        <div class="lz-d-body">
-          <div class="lz-d-view"><div class="lz-d-canvas"><img src="landing-zone-hub-spoke.svg?v=2" alt="" width="3693" height="1718"><span class="lz-d-markers" aria-hidden="true"></span></div></div>
-          <aside class="lz-d-work" aria-live="polite"><p class="lz-d-work-label">What I did</p><ul></ul></aside>
-        </div>
-        <div class="lz-d-foot">
-          <button type="button" class="lz-d-prev">← Previous</button>
-          <button type="button" class="lz-d-all">Whole diagram</button>
-          <button type="button" class="lz-d-next">Next →</button>
-        </div>
-      </dialog>
-    </section>
-
-    <section class="expertise wrap section-rule" id="about" aria-labelledby="about-title">
-      <div class="section-intro">
-        <p class="section-label">Expertise</p>
-        <h2 id="about-title">Where I like to dig in.</h2>
-        <p>I enjoy the work between a technical challenge and a useful solution: understanding what’s in the way, building with my teammates, and helping others move forward.</p>
-      </div>
-      <div class="expertise-grid">
-        <article><span class="number">01</span><h3>Azure infrastructure</h3><p>I help turn Azure environments into foundations teams can understand and build on, using landing zones, clear resource standards, and Bicep and GitHub deployments.</p></article>
-        <article><span class="number">02</span><h3>Identity and security</h3><p>I audit identity and access and work through Azure Firewall rules with teammates. I want people to understand how access works and what their services need.</p></article>
-        <article><span class="number">03</span><h3>Responsible AI adoption</h3><p>I’m helping with Microsoft Copilot rollout and AI enablement. My focus is making AI useful to people while keeping safe use and governance part of the conversation.</p></article>
-      </div>
-    </section>
-
-    <section class="contact wrap section-rule" id="contact" aria-labelledby="contact-title">
-      <p class="section-label">Contact</p>
-      <h2 id="contact-title">Let’s connect.</h2>
-      <p>I always enjoy hearing from people who work with Azure, care about how teams build together, or are just curious about the work. Whether it’s swapping ideas, comparing notes, or exploring working together, feel free to reach out.</p>
-      <div class="actions contact-actions">
-        <a class="button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-        <a class="text-link" href="contact.html">Get to know me <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
+    <section class="closing-contact mock-container" id="contact"><h2>Let’s connect.</h2><p>I always enjoy meeting people who are building on Azure, working through cloud challenges, or just curious about the work. Feel free to reach out to swap ideas, talk about what you’re building, explore working together, or simply say hello.</p><a class="mock-button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></section>
   </main>
-  <footer class="site-footer wrap"><span>© <span id="year">2026</span> Aaron Petty</span><a href="#top">Back to top ↑</a></footer>
+  <footer class="mock-footer mock-container"><span>© <span id="year">2026</span> Aaron Petty</span><a href="#top">Back to top ↑</a></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

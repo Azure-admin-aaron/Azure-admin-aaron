@@ -1,30 +1,14 @@
 (() => {
   const header = document.querySelector('.portfolio-header');
   if (!header) return;
-  const toggle = header.querySelector('.navigation-toggle');
   const nav = header.querySelector('.portfolio-nav');
-  const mobile = window.matchMedia('(max-width: 760px)');
-  header.setAttribute('data-nav-ready', '');
-
-  function closeMenu(returnFocus = false) {
-    toggle.setAttribute('aria-expanded', 'false');
-    nav.classList.remove('is-open');
-    if (returnFocus) toggle.focus();
-  }
-
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') !== 'true';
-    toggle.setAttribute('aria-expanded', String(open));
-    nav.classList.toggle('is-open', open);
-  });
 
   nav.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!link) return;
-    closeMenu();
     const destination = new URL(link.href);
     if (destination.pathname === window.location.pathname && destination.hash) {
-      // Move keyboard focus to the destination before hiding the mobile menu.
+      // Move keyboard focus to the destination section.
       const section = document.getElementById(destination.hash.slice(1));
       if (section) {
         section.setAttribute('tabindex', '-1');
@@ -33,19 +17,6 @@
       }
     }
   });
-
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      closeMenu(true);
-    }
-  });
-  document.addEventListener('click', event => {
-    if (!header.contains(event.target)) closeMenu();
-  });
-  header.addEventListener('focusout', event => {
-    if (!header.contains(event.relatedTarget)) closeMenu();
-  });
-  mobile.addEventListener('change', () => closeMenu());
 
   const links = [...nav.querySelectorAll('a')];
   function markCurrentLink() {

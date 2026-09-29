@@ -25,4 +25,4 @@ The result was a more structured Azure environment, clearer resource identificat
 
 **AZ-104 certified · AZ-305 in progress**
 
-[My portfolio](https://azure-admin-aaron.github.io/Azure-admin-aaron/index.html) · [Connect on LinkedIn](https://www.linkedin.com/in/aaron-petty-a0a09860)
+[My portfolio](https://azure-admin-aaron.github.io/Azure-admin-aaron/index.html) · [My work](https://azure-admin-aaron.github.io/Azure-admin-aaron/work.html) · [Connect on LinkedIn](https://www.linkedin.com/in/aaron-petty-a0a09860)
