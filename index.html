@@ -7,16 +7,26 @@
   <meta name="description" content="Aaron Petty’s work in Azure landing zones, Bicep and GitHub deployments, IAM auditing, and responsible Microsoft Copilot adoption.">
   <title>Aaron Petty — Cloud Engineering & Responsible AI</title>
   <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="navigation.css?v=1">
+  <script src="navigation.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="#top" aria-label="Aaron Petty, home">Aaron Petty</a>
-    <nav aria-label="Main navigation">
-      <a href="#about">Expertise</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="portfolio-header">
+    <div class="navigation-inner">
+      <a class="portfolio-brand" href="index.html" aria-label="Aaron Petty, home">Aaron Petty</a>
+      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span>Menu</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path class="menu-bars" d="M3 5h14M3 10h14M3 15h14"/><path class="menu-close" d="m5 5 10 10M15 5 5 15"/></svg>
+      </button>
+      <nav class="portfolio-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="contact.html">About</a>
+        <a href="contact.html#about">Expertise</a>
+        <a href="contact.html#projects">Work</a>
+        <a class="navigation-contact" href="contact.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
