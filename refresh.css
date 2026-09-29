@@ -47,9 +47,9 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
 .contribution-grid p{font-size:16px}
 
 /* Close: the most human part of the page */
-.closing-contact{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:88px 55px 96px;border-top:0;background:var(--tint);max-width:none;width:100%}
-.closing-copy{justify-self:end;max-width:520px}
-.closing-photo{justify-self:start;width:min(100%,360px);height:auto;aspect-ratio:1159/1358;object-fit:cover;border-radius:3px;display:block}
+.closing-contact{display:block;padding:88px 0 96px;border-top:0;background:var(--tint);max-width:none;width:100%}
+.closing-copy{max-width:1024px;margin-inline:auto;padding-inline:55px}
+.closing-copy p{max-width:560px}
 .closing-contact h2{font-size:clamp(40px,5vw,60px);line-height:1;font-weight:600;letter-spacing:-.03em;margin:0 0 20px}
 .closing-contact p{font-size:18px;line-height:1.6;color:var(--body);margin:0 0 26px}
 .mock-footer{font-size:13px}
@@ -67,9 +67,8 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
  .expertise-columns{grid-template-columns:1fr;gap:26px}
  .expertise-columns article,.expertise-columns article:first-child{border-left:0;padding:16px 0 0}
  .featured-project{padding-top:52px}
- .closing-contact{grid-template-columns:1fr;gap:32px;padding:56px 20px 60px}
- .closing-copy{justify-self:start}
- .closing-photo{width:100%;max-width:none;aspect-ratio:1.1}
+ .closing-contact{padding:56px 0 60px}
+ .closing-copy{padding-inline:20px}
 }
 @media(max-width:400px){.hero-cert{font-size:13.5px}}
 
