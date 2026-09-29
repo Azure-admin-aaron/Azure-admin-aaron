@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css?v=4">
   <link rel="stylesheet" href="navigation.css?v=1">
   <script src="navigation.js?v=1" defer></script>
+  <script src="lz-viewer.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -57,7 +58,7 @@
       </div>
     </section>
 
-    <section class="work wrap section-rule" id="work" aria-labelledby="work-title">
+    <section class="work work-wide wrap section-rule" id="work" aria-labelledby="work-title">
       <div class="work-copy">
         <p class="section-label">A story from my work</p>
         <h2 id="work-title">Making room to build.</h2>
@@ -65,44 +66,39 @@
         <p>My pieces were naming and tagging, networking, private DNS, and Azure Front Door. Then I partnered directly with developers as they began deploying applications and databases into the new environment.</p>
         <a class="text-link" href="contact.html#projects">Read the full story <span aria-hidden="true">→</span></a>
       </div>
-      <figure class="project-visual">
-        <svg viewBox="22 34 440 292" role="img" aria-labelledby="platform-title platform-description" xmlns="http://www.w3.org/2000/svg">
-          <title id="platform-title">The Azure landing zones we built</title>
-          <desc id="platform-description">A shared platform zone connects to the management, online and corporate landing zones. Developers deploy applications into the online zone and databases into the corporate zone.</desc>
-          <style>
-          .lz-flow{stroke:#0759e6;stroke-width:2;stroke-linecap:round;stroke-dasharray:3 10;animation:lz-flow 1.6s linear infinite}
-          .lz-dev{stroke:#22a55a;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:3 7;fill:none;animation:lz-flow 1.9s linear infinite}
-          @keyframes lz-flow{to{stroke-dashoffset:-26}}
-          @media (prefers-reduced-motion:reduce){.lz-flow,.lz-dev{animation:none}}
-          </style>
-          <defs>
-          <radialGradient id="lz-halo" cx="50%" cy="55%" r="55%"><stop stop-color="#e6f0ff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-          <linearGradient id="lz-plat" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fbfdff"/><stop offset="1" stop-color="#e8f0fd"/></linearGradient>
-          <linearGradient id="lz-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e7effd"/></linearGradient>
-          <linearGradient id="lz-hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4f8ff8"/><stop offset="1" stop-color="#0759e6"/></linearGradient>
-          <filter id="lz-soft" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0b2a66" flood-opacity=".15"/></filter>
-          <filter id="lz-blur"><feGaussianBlur stdDeviation="12"/></filter>
-          </defs>
-          <ellipse cx="240" cy="180" rx="236" ry="160" fill="url(#lz-halo)"/>
-          <ellipse cx="240" cy="319" rx="153" ry="16" fill="#0b2a66" opacity=".12" filter="url(#lz-blur)"/>
-          <polygon points="44.0,186.0 240.0,299.1 240.0,313.1 44.0,200.0" fill="#d3e2f8" stroke="#c6d8f3" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,299.1 436.0,186.0 436.0,200.0 240.0,313.1" fill="#b4cbf1" stroke="#c6d8f3" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,72.9 436.0,186.0 240.0,299.1 44.0,186.0" fill="url(#lz-plat)" stroke="#c6d8f3" stroke-width="1.2" stroke-linejoin="round"/>
-          <g stroke="#a9c3ee" stroke-width="2" stroke-linecap="round"><line x1="240.0" y1="129.5" x2="142.0" y2="186.0"/><line x1="240.0" y1="129.5" x2="338.0" y2="186.0"/><line x1="240.0" y1="129.5" x2="240.0" y2="242.5"/></g>
-          <g class="lz-flow"><line x1="240.0" y1="129.5" x2="142.0" y2="186.0"/><line x1="240.0" y1="129.5" x2="338.0" y2="186.0"/><line x1="240.0" y1="129.5" x2="240.0" y2="242.5"/></g>
-          <g filter="url(#lz-soft)"><polygon points="179.2,121.5 240.0,156.5 240.0,164.5 179.2,129.5" fill="#1f63d6" stroke="#0a4fc4" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,156.5 300.8,121.5 300.8,129.5 240.0,164.5" fill="#0a48b8" stroke="#0a4fc4" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,86.4 300.8,121.5 240.0,156.5 179.2,121.5" fill="url(#lz-hub)" stroke="#0a4fc4" stroke-width="1.2" stroke-linejoin="round"/></g>
-          <g filter="url(#lz-soft)"><polygon points="277.2,178.0 338.0,213.1 338.0,221.1 277.2,186.0" fill="#d6e4fb" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="338.0,213.1 398.8,178.0 398.8,186.0 338.0,221.1" fill="#a9c5f3" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="338.0,142.9 398.8,178.0 338.0,213.1 277.2,178.0" fill="url(#lz-top)" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/></g>
-          <g filter="url(#lz-soft)"><polygon points="81.2,178.0 142.0,213.1 142.0,221.1 81.2,186.0" fill="#d6e4fb" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="142.0,213.1 202.8,178.0 202.8,186.0 142.0,221.1" fill="#a9c5f3" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="142.0,142.9 202.8,178.0 142.0,213.1 81.2,178.0" fill="url(#lz-top)" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/></g>
-          <g filter="url(#lz-soft)"><polygon points="179.2,234.5 240.0,269.6 240.0,277.6 179.2,242.5" fill="#d6e4fb" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,269.6 300.8,234.5 300.8,242.5 240.0,277.6" fill="#a9c5f3" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/><polygon points="240.0,199.5 300.8,234.5 240.0,269.6 179.2,234.5" fill="url(#lz-top)" stroke="#9dbbe9" stroke-width="1.2" stroke-linejoin="round"/></g>
-          <path class="lz-dev" d="M406 264 Q387 152 356 176"/>
-          <path class="lz-dev" d="M406 264 Q338 209 258 233"/>
-          <g filter="url(#lz-soft)"><rect x="192.6" y="95.45400000000001" width="94.8" height="28" rx="14" fill="#0759e6" stroke="#0759e6"/><g transform="translate(208.6 109.45400000000001) scale(.8)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="-5" r="3"/><circle cx="-6" cy="5" r="3"/><circle cx="6" cy="5" r="3"/><path d="M0-2-4.5 3M0-2 4.5 3M-3 5h6"/></g><text x="220.6" y="114.5" fill="#fff" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="600">Platform</text></g>
-          <g filter="url(#lz-soft)"><rect x="298.7" y="152.0" width="78.6" height="28" rx="14" fill="#fff" stroke="#b9cff2"/><g transform="translate(314.7 166.0) scale(.8)" fill="none" stroke="#0759e6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle r="8"/><path d="M-8 0h16M0-8c3 3 3 13 0 16M0-8c-3 3-3 13 0 16"/></g><text x="326.7" y="171.0" fill="#0b1630" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="600">Online</text></g>
-          <g filter="url(#lz-soft)"><rect x="86.5" y="152.0" width="111.0" height="28" rx="14" fill="#fff" stroke="#b9cff2"/><g transform="translate(102.5 166.0) scale(.8)" fill="none" stroke="#0759e6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0-9 7-6v5c0 5-3 8-7 10-4-2-7-5-7-10v-5z"/><path d="m-3 0 2 2 4-4"/></g><text x="114.5" y="171.0" fill="#0b1630" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="600">Management</text></g>
-          <g filter="url(#lz-soft)"><rect x="188.6" y="208.546" width="102.9" height="28" rx="14" fill="#fff" stroke="#b9cff2"/><g transform="translate(204.6 222.546) scale(.8)" fill="none" stroke="#0759e6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cy="-5" rx="7" ry="2.8"/><path d="M-7-5v10c0 3.7 14 3.7 14 0V-5M-7 0c0 3.7 14 3.7 14 0"/></g><text x="216.6" y="227.5" fill="#0b1630" font-family="DM Sans,Arial,sans-serif" font-size="14" font-weight="600">Corporate</text></g>
-          <g filter="url(#lz-soft)"><circle cx="420" cy="270" r="17" fill="#fff" stroke="#22a55a" stroke-width="2"/><circle cx="420" cy="266" r="5" fill="#22a55a"/><path d="M411 281a9 8 0 0 1 18 0" fill="#22a55a"/></g>
-          <text x="420" y="304" text-anchor="middle" fill="#3c4a63" font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="600">Developers</text>
-          </svg>
-        <figcaption>Illustration: the landing zones we built, with developers deploying into them.</figcaption>
+      <ol class="lz-legend" aria-label="Where my work fits in the landing zone model">
+        <li><button type="button" class="lz-spot" data-lz="0" data-x="35.0" data-y="7.95" data-box="27.7,3.5,65.2,22" data-what="The top of the structure. Management groups organize subscriptions so access, policy and cost rules apply consistently to everything below them." data-work="Worked with my cloud team to shape the hierarchy for the platform, management, online and corporate landing zones|Audited identity and access: who holds which roles, and how that access is granted"><strong>Management groups</strong> Landing zone hierarchy and access audits</button></li>
+        <li><button type="button" class="lz-spot" data-lz="1" data-x="33.0" data-y="32.3" data-box="27.7,21,65.2,35" data-what="Each platform function and workload gets its own subscription: a security and billing boundary that sits under the right management group." data-work="Helped introduce naming and tagging conventions aligned with Microsoft&#x27;s Cloud Adoption Framework, so it&#x27;s easy to tell what each subscription and resource is for"><strong>Subscriptions</strong> Naming and tagging standards</button></li>
+        <li><button type="button" class="lz-spot" data-lz="2" data-x="71.8" data-y="6.5" data-box="66,2,88,28" data-what="The platform defined as code: a Git repository and deployment pipelines that roll out the landing zones, roles and policies." data-work="Built the Bicep templates together with the team|Contributed to the GitHub deployment workflows (CI/CD) that deploy the environment|Set up private GitHub runners inside Azure so CI/CD pipelines can deploy to resources behind private endpoints"><strong>Platform DevOps</strong> Bicep, GitHub workflows and private runners</button></li>
+        <li><button type="button" class="lz-spot" data-lz="3" data-x="8.1" data-y="35.4" data-box="1,32,23,56" data-what="A dedicated home for security logs and monitoring, kept separate so security data stays protected and easy to review." data-work="Set up CrowdStrike SIEM to collect Azure monitoring data and diagnostic logs|Used Microsoft Defender for Cloud for security monitoring"><strong>Security subscription</strong> CrowdStrike SIEM and Defender for Cloud</button></li>
+        <li><button type="button" class="lz-spot" data-lz="4" data-x="8.4" data-y="58.1" data-box="1,55,23,87" data-what="Shared operations tooling for the whole platform: logs, dashboards, alerts and cost reporting." data-work="Built dashboards and Log Analytics queries|Set up alert rules and action groups so the right people are notified|Applied our tagging standard so costs can be reported by team and application"><strong>Management subscription</strong> Dashboards, alerts and cost tagging</button></li>
+        <li><button type="button" class="lz-spot" data-lz="5" data-x="36.3" data-y="37.9" data-box="29.5,35,51,62" data-what="The network hub every workload connects through. The firewall, DNS and gateways live here and are shared by all landing zones." data-work="Configured virtual networks and VNet peering|Configured private DNS zones and records so services can find each other privately|Worked through Azure Firewall rule collections and rules with teammates"><strong>Connectivity hub</strong> VNets, peering, private DNS and firewall rules</button></li>
+        <li><button type="button" class="lz-spot" data-lz="6" data-x="37.3" data-y="69.3" data-box="29.5,66,51,88" data-what="A landing zone where the platform team runs its own shared services, the same way application teams run theirs." data-work="Hosted the private GitHub runners here, so CI/CD pipelines can deploy to resources behind private endpoints|Deployed them with the team&#x27;s Bicep templates and GitHub workflows"><strong>Platform landing zone (P1)</strong> Private GitHub runners, deployed as code</button></li>
+        <li><button type="button" class="lz-spot" data-lz="7" data-x="59.4" data-y="37.4" data-box="52,34,74,90" data-what="Where application teams run their workloads. Online is for internet-facing apps; Corp is for internal apps that connect to company networks." data-work="Worked with developers deploying applications into the Online zone|Set up databases in the Corp zone|Created Azure Front Door and managed its endpoints|Stayed involved as developers began using the environment"><strong>Application landing zone</strong> App and database deployments, Front Door</button></li>
+        <li><button type="button" class="lz-spot" data-lz="8" data-x="80.7" data-y="37.5" data-box="74,34,95,59" data-what="An isolated space for testing ideas, kept apart from production networks and data." data-work="Set up sandbox subscriptions so people can experiment safely"><strong>Sandbox</strong> Sandbox subscriptions for safe experiments</button></li>
+      </ol>
+      <figure class="lz-figure">
+        <div class="lz-frame">
+          <button type="button" class="lz-open" data-lz="-1" aria-label="Open the full diagram"><img src="landing-zone-hub-spoke.svg?v=2" width="3693" height="1718" loading="lazy" decoding="async" alt="Microsoft's Azure landing zone reference architecture using a hub and spoke network: management groups, platform subscriptions for security, management and connectivity, and application landing zones for corp and online workloads."></button>
+          <div class="lz-markers"><button type="button" class="lz-marker" data-lz="0" style="left:35.0%;top:7.95%" aria-label="Zoom to 1: Management groups">1</button><button type="button" class="lz-marker" data-lz="1" style="left:33.0%;top:32.3%" aria-label="Zoom to 2: Subscriptions">2</button><button type="button" class="lz-marker" data-lz="2" style="left:71.8%;top:6.5%" aria-label="Zoom to 3: Platform DevOps">3</button><button type="button" class="lz-marker" data-lz="3" style="left:8.1%;top:35.4%" aria-label="Zoom to 4: Security subscription">4</button><button type="button" class="lz-marker" data-lz="4" style="left:8.4%;top:58.1%" aria-label="Zoom to 5: Management subscription">5</button><button type="button" class="lz-marker" data-lz="5" style="left:36.3%;top:37.9%" aria-label="Zoom to 6: Connectivity hub">6</button><button type="button" class="lz-marker" data-lz="6" style="left:37.3%;top:69.3%" aria-label="Zoom to 7: Platform landing zone (P1)">7</button><button type="button" class="lz-marker" data-lz="7" style="left:59.4%;top:37.4%" aria-label="Zoom to 8: Application landing zone">8</button><button type="button" class="lz-marker" data-lz="8" style="left:80.7%;top:37.5%" aria-label="Zoom to 9: Sandbox">9</button></div>
+        </div>
+        <figcaption>The Azure landing zone model (hub and spoke) our zones were based on. Select a number to see what each part does and what I did there, or the diagram to see it all.<br>Diagram © Microsoft, adapted from the <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank" rel="noopener noreferrer">Cloud Adoption Framework</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Sections removed and numbered markers added.</figcaption>
       </figure>
+      <dialog class="lz-dialog" aria-labelledby="lz-d-title">
+        <div class="lz-d-head">
+          <div><p class="lz-d-kicker"></p><h3 id="lz-d-title"></h3><p class="lz-d-text"></p></div>
+          <button type="button" class="lz-d-close" aria-label="Close">×</button>
+        </div>
+        <div class="lz-d-body">
+          <div class="lz-d-view"><div class="lz-d-canvas"><img src="landing-zone-hub-spoke.svg?v=2" alt="" width="3693" height="1718"><span class="lz-d-markers" aria-hidden="true"></span></div></div>
+          <aside class="lz-d-work" aria-live="polite"><p class="lz-d-work-label">What I did</p><ul></ul></aside>
+        </div>
+        <div class="lz-d-foot">
+          <button type="button" class="lz-d-prev">← Previous</button>
+          <button type="button" class="lz-d-all">Whole diagram</button>
+          <button type="button" class="lz-d-next">Next →</button>
+        </div>
+      </dialog>
     </section>
 
     <section class="contact wrap section-rule" id="contact" aria-labelledby="contact-title">
