@@ -23,6 +23,52 @@
   layer.innerHTML = spots.map((s, i) =>
     `<span class="lz-marker" style="left:${s.x}%;top:${s.y}%">${i + 1}</span>`).join('');
 
+  // Reuse the page's flowing-dot layer inside the zoom view.
+  const flow = document.querySelector('.lz-canvas .lz-flow');
+  if (flow) {
+    const copy = flow.cloneNode(true);
+    // The zoom view is already magnified, so use smaller dots there.
+    copy.querySelectorAll('circle').forEach(c => c.setAttribute('r', c.getAttribute('r') * 0.55));
+    canvas.insertBefore(copy, layer);
+  }
+
+  // Hover to magnify the page diagram around the pointer (mouse and trackpad only).
+  const stage = document.querySelector('.lz-stage');
+  const stageCanvas = stage && stage.querySelector('.lz-canvas');
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  const ZOOM = 2.2;
+  let pointer = null, frame = 0;
+
+  function pan() {
+    frame = 0;
+    if (!pointer) return;
+    const r = stage.getBoundingClientRect();
+    const x = Math.min(Math.max(pointer.x - r.left, 0), r.width);
+    const y = Math.min(Math.max(pointer.y - r.top, 0), r.height);
+    stageCanvas.style.transform = `translate(${x * (1 - ZOOM)}px, ${y * (1 - ZOOM)}px)`;
+  }
+
+  if (stage && stageCanvas) {
+    stage.classList.toggle('is-zoomable', fine.matches);
+    fine.addEventListener('change', () => stage.classList.toggle('is-zoomable', fine.matches));
+    stage.addEventListener('pointerenter', e => {
+      if (!fine.matches || e.pointerType !== 'mouse') return;
+      pointer = { x: e.clientX, y: e.clientY };
+      stageCanvas.style.width = `${ZOOM * 100}%`;
+      pan();
+    });
+    stage.addEventListener('pointermove', e => {
+      if (!pointer) return;
+      pointer = { x: e.clientX, y: e.clientY };
+      if (!frame) frame = requestAnimationFrame(pan);
+    });
+    stage.addEventListener('pointerleave', () => {
+      pointer = null;
+      stageCanvas.style.width = '';
+      stageCanvas.style.transform = '';
+    });
+  }
+
   // Expand a box (in % of the diagram) to the diagram's aspect ratio, kept inside the edges.
   function fit([x0, y0, x1, y1]) {
     let w = (x1 - x0) / 100 * W, h = (y1 - y0) / 100 * H;
