@@ -3,89 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get to know me through my work: building Azure foundations with my team, supporting developers, and helping people adopt AI responsibly.">
-  <title>About Aaron Petty — Azure Cloud Engineering</title>
-  <link rel="stylesheet" href="styles.css?v=4"><link rel="stylesheet" href="contact.css?v=5">
-  <link rel="stylesheet" href="navigation.css?v=1">
-  <script src="navigation.js?v=1" defer></script>
+  <meta name="robots" content="noindex">
+  <title>Aaron Petty</title>
+  <link rel="canonical" href="index.html">
+  <script>
+    // The About page moved to the home page, and its work story moved to work.html.
+    (() => {
+      const map = { '#projects': 'work.html#story', '#about': 'index.html#expertise', '#contact': 'index.html#contact' };
+      location.replace(map[location.hash] || 'index.html' + location.hash);
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=index.html">
 </head>
-<body class="mock-page">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="portfolio-header">
-    <div class="navigation-inner">
-      <a class="portfolio-brand" href="index.html" aria-label="Aaron Petty, home">Aaron Petty</a>
-      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-        <span>Menu</span>
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path class="menu-bars" d="M3 5h14M3 10h14M3 15h14"/><path class="menu-close" d="m5 5 10 10M15 5 5 15"/></svg>
-      </button>
-      <nav class="portfolio-nav" id="main-navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="contact.html" aria-current="page">About</a>
-        <a href="contact.html#about">Expertise</a>
-        <a href="contact.html#projects">Work</a>
-        <a class="navigation-contact" href="contact.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <section class="mock-hero mock-container" aria-labelledby="hero-title">
-      <div class="mock-hero-copy"><p class="eyebrow">AZURE CLOUD ENGINEER</p>
-        <h1 id="hero-title">I build with<br><span>people in mind.</span></h1>
-        <p class="hero-description">I’m Aaron. I like untangling cloud challenges, building alongside my teammates, and helping people take the next step. Azure is where I do much of that work.</p>
-        <div class="mock-actions"><a class="mock-button" href="#projects">See My Work <span aria-hidden="true">→</span></a><a class="mock-link" href="#contact">Get in Touch <span aria-hidden="true">→</span></a></div>
-      </div>
-      <div class="hero-photo"><img src="aaron-headshot-outdoors.jpeg" width="1086" height="1448" alt="Aaron Petty" fetchpriority="high"></div>
-      <p class="handwritten" aria-hidden="true">Hi, I’m<br>Aaron.<span></span></p>
-    </section>
-    <section class="mock-proof mock-container" aria-label="Highlights">
-      <div class="proof-item"><svg class="azure-mark" viewBox="0 0 96 96" role="img" aria-label="Azure"><path fill="#0078D4" fill-rule="evenodd" clip-rule="evenodd" d="M28.1854 10.081C29.0086 7.64193 31.2961 5.99976 33.8703 5.99976H36.9987H38.4459L38.446 6.00005H62.1284C64.7027 6.00005 66.9901 7.64222 67.8133 10.0813L92.1131 82.0807C93.4258 85.97 90.533 89.9994 86.4282 89.9994H59.0001V89.973C58.8125 89.9904 58.6218 89.9994 58.4285 89.9994H58.3233C57.0345 89.9994 55.7799 89.5844 54.7454 88.8158L36.4266 75.2076L32.812 85.9178C31.9888 88.3569 29.7014 89.9991 27.1271 89.9991H9.57056C5.46579 89.9991 2.57303 85.9697 3.88564 82.0804L28.1854 10.081ZM23.4277 60.5684L57.1306 85.6049C57.4755 85.8611 57.8937 85.9994 58.3233 85.9994H58.4285C59.7967 85.9994 60.761 84.6563 60.3234 83.3598L46.9041 43.5989L41.2017 58.759L40.7142 60.0549H39.3297H22.7397L23.4277 60.5684ZM86.4282 85.9994H64.0881C64.5181 84.7919 64.568 83.4279 64.1134 82.0807L39.8136 10.0813C39.8044 10.0541 39.795 10.027 39.7855 10H62.1284C62.9865 10 63.749 10.5474 64.0234 11.3604L88.3232 83.3598C88.7607 84.6563 87.7965 85.9994 86.4282 85.9994Z"/></svg><p><strong>Microsoft Certified</strong><small>Azure Administrator</small></p></div>
-      <div class="proof-item"><svg viewBox="0 0 48 43" aria-hidden="true"><path fill="currentColor" d="M12 36a11 11 0 0 1-1-22 15 15 0 0 1 29 4 9 9 0 0 1-1 18z"/></svg><p><strong>Infrastructure as Code</strong><small>Bicep · GitHub · CI/CD</small></p></div>
-      <div class="proof-item"><svg viewBox="0 0 44 44" aria-hidden="true"><path fill="currentColor" d="M3 29h8v12H3zm13-9h8v21h-8zm13-13h8v34h-8z"/></svg><p><strong>Built Together</strong><small>Cloud + development teams</small></p></div>
-    </section>
-    <section class="expertise-band" id="about" aria-labelledby="expertise-title"><div class="mock-container">
-      <div class="expertise-intro"><div><p class="eyebrow">EXPERTISE</p><h2 id="expertise-title">I care about what<br>happens after delivery.</h2></div><p>A cloud foundation matters when people can use it. I work on the infrastructure, the access, and the conversations that help teams build with confidence.</p></div>
-      <div class="expertise-columns">
-        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M13 33H9a8 8 0 0 1-1-16 12 12 0 0 1 23 2 7 7 0 0 1 1 14H13z"/></svg><h3>Azure Infrastructure</h3></div><p>I help shape landing zones and resource standards.</p><p>I set up the networking and private DNS that let services find each other.</p><p>I manage Front Door endpoints and help teams make sense of Firewall rules.</p></article>
-        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path fill="currentColor" d="m19 3-1 5-4 2-5-2-5 8 4 4v5l-4 3 5 9 5-3 4 2 1 5h10l1-5 4-2 5 3 5-9-4-3v-5l4-4-5-8-5 2-4-2-1-5zm5 13a7 7 0 1 1 0 14 7 7 0 0 1 0-14" fill-rule="evenodd" transform="translate(-2 -1) scale(.92)"/></svg><h3>Automation &amp; IaC</h3></div><p>I build Bicep templates with my team.</p><p>I help run deployments through GitHub workflows.</p><p>Repeatable deployments mean fewer surprises.</p></article>
-        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="m22 4 14 5v10c0 10-7 17-14 21C15 36 8 29 8 19V9zM22 9v25m0-12 12-8"/></svg><h3>Identity &amp; AI</h3></div><p>I audit identity and access.</p><p>I’m helping roll out Microsoft Copilot.</p><p>I make sure safe AI use stays part of the plan.</p></article>
-        <article><div class="column-heading"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="11" r="5"/><circle cx="8" cy="16" r="4"/><circle cx="36" cy="16" r="4"/><path d="M12 32v-5c0-5 4-9 10-9s10 4 10 9v5zm-11 1v-7c0-4 3-7 7-7 2 0 4 1 5 2-3 3-4 6-4 11zm42 0H35v-1c0-5-1-8-4-11 1-1 3-2 5-2 4 0 7 3 7 7z"/></svg><h3>Collaboration</h3></div><p>I work directly with developers.</p><p>I support application and database deployment.</p><p>I help teammates understand firewall rules.</p></article>
-      </div>
-    </div></section>
-    <section class="featured-project mock-container" id="projects" aria-labelledby="project-title">
-      <div class="project-copy"><p class="eyebrow">A STORY FROM MY WORK</p><h2 id="project-title">From unclear resources to a shared foundation.</h2>
-        <p>One project captures how I like to work. Our Azure environment had limited documentation, and it was hard to tell what resources were for. I joined my cloud team in giving it clearer structure through landing zones, naming conventions, and tagging.</p>
-        <p>We built the Bicep templates and GitHub deployment workflows together. As the platform, management, online, and corporate zones took shape, I worked with developers to begin deploying applications into the online zone and databases into the corporate zone.</p>
-        <div class="project-results">
-          <div><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14"/><path d="M18 8v11l7 4"/></svg><span>Clearer <br>resources at a glance</span></div>
-          <div><svg viewBox="0 0 36 36" aria-hidden="true"><path d="m18 3 12 5v9c0 8-5 13-12 17C11 30 6 25 6 17V8z"/></svg><span>Bicep &amp; GitHub <br>deployments we share</span></div>
-          <div><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="9" r="4"/><circle cx="6" cy="13" r="3"/><circle cx="30" cy="13" r="3"/><path fill="currentColor" stroke="none" d="M10 30v-8c0-4 3-7 8-7s8 3 8 7v8zm-10 0v-7c0-4 2-6 6-6 2 0 3 1 4 2-2 2-3 5-3 9v2zm36 0h-7v-2c0-4-1-7-3-9 1-1 2-2 4-2 4 0 6 2 6 6z"/></svg><span>Cloud + dev <br>building side by side</span></div>
-        </div>
-        <a class="mock-button" href="https://github.com/Azure-admin-aaron" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-      </div>
-      <img class="project-photo" src="azure-building.jpg" width="1000" height="750" alt="Modern blue glass office building representing Azure platform work" loading="lazy">
-    </section>
-    <section class="work-detail mock-container" aria-labelledby="contribution-title">
-      <p class="eyebrow">WHERE I GOT HANDS-ON</p>
-      <h2 id="contribution-title">Making it work for people.</h2>
-      <div class="contribution-grid">
-        <article><h3>Making resources easier to understand</h3><p>I helped introduce naming and tagging conventions aligned with Microsoft’s Cloud Adoption Framework. The aim was practical: make it easier to understand what a resource is for.</p></article>
-        <article><h3>Connecting the pieces</h3><p>I configured virtual networks, VNet peering, private DNS zones, and DNS records. That networking is what let the services the team was bringing in reach each other.</p></article>
-        <article><h3>Sharing what I know</h3><p>I set up Azure Front Door and managed its endpoints. I also worked through Azure Firewall behavior with teammates, explaining how rule collections and rules support the access their services need.</p></article>
-        <article><h3>Helping developers get started</h3><p>I stayed involved as developers began using the environment, working with them on application deployments in the online zone and database setup in the corporate zone.</p></article>
-      </div>
-      <p class="project-outcome"><strong>What we built together:</strong> a more structured Azure environment, resources with clearer purpose, and a foundation developers had begun using. That connection between infrastructure and the people using it is what I want to keep building.</p>
-    </section>
-    <section class="work-detail current-focus mock-container" aria-labelledby="focus-title">
-      <p class="eyebrow">WHAT I’M WORKING ON NOW</p>
-      <h2 id="focus-title">Making AI safe and useful at work.</h2>
-      <div class="contribution-grid">
-        <article><h3>Copilot and AI enablement</h3><p>I’m helping roll out Microsoft Copilot and enable AI use across the organization. The work is ongoing, and I’m focused on helping people use these tools safely, with governance built into the approach.</p></article>
-        <article><h3>Identity and access</h3><p>I also audit identity and access management. Understanding who has access, and how that access is managed, is part of making cloud and AI adoption safe for everyone.</p></article>
-      </div>
-    </section>
-    <section class="closing-contact mock-container" id="contact"><h2>Let’s connect.</h2><p>I always enjoy meeting people who are building on Azure, working through cloud challenges, or just curious about the work. Feel free to reach out to swap ideas, talk about what you’re building, explore working together, or simply say hello.</p><a class="mock-button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></section>
-  </main>
-  <footer class="mock-footer mock-container"><span>© <span id="year">2026</span> Aaron Petty</span><a href="index.html">Back to home <span aria-hidden="true">→</span></a></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<body>
+  <p>This page has moved. <a href="index.html">Go to the home page</a> or <a href="work.html">see my work</a>.</p>
 </body>
 </html>

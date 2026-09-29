@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="A closer look at my Azure work: landing zones, networking, security monitoring and CI/CD, mapped onto Microsoft’s landing zone architecture.">
+  <title>Work — Aaron Petty</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="navigation.css?v=1">
+  <script src="navigation.js?v=1" defer></script>
+  <script src="lz-viewer.js?v=5" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="portfolio-header">
+    <div class="navigation-inner">
+      <a class="portfolio-brand" href="index.html" aria-label="Aaron Petty, home">Aaron Petty</a>
+      <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        <span>Menu</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path class="menu-bars" d="M3 5h14M3 10h14M3 15h14"/><path class="menu-close" d="m5 5 10 10M15 5 5 15"/></svg>
+      </button>
+      <nav class="portfolio-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="index.html#expertise">Expertise</a>
+        <a class="navigation-contact" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Building Azure<br>foundations<br><span>people can use.</span></h1>
+        <p>Here’s a closer look at one project: reshaping our Azure environment around landing zones, and the parts I built, configured and supported along the way.</p>
+        <div class="actions">
+          <a class="button" href="#story">Explore the project <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="hero-graphic.svg" width="480" height="460" alt="" decoding="async" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="work work-wide wrap section-rule" id="story" aria-labelledby="work-title">
+      <div class="work-copy">
+        <p class="section-label">A story from my work</p>
+        <h2 id="work-title">Making room to build.</h2>
+        <p>Our Azure environment needed clearer structure and resource identification. Together with my cloud team, I helped reshape it around landing zones, shared Bicep templates, and GitHub deployment workflows.</p>
+        <p>My pieces were naming and tagging, networking, private DNS, and Azure Front Door. Then I partnered directly with developers as they began deploying applications and databases into the new environment.</p>
+        <a class="text-link" href="#hands-on">What I worked on <span aria-hidden="true">↓</span></a>
+      </div>
+      <ol class="lz-legend" aria-label="Where my work fits in the landing zone model">
+        <li><button type="button" class="lz-spot" data-lz="0" data-x="35.0" data-y="7.95" data-box="27.7,3.5,65.2,22" data-what="The top of the structure. Management groups organize subscriptions so access, policy and cost rules apply consistently to everything below them." data-work="Worked with my cloud team to shape the hierarchy for the platform, management, online and corporate landing zones|Audited identity and access: who holds which roles, and how that access is granted"><strong>Management groups</strong> Landing zone hierarchy and access audits</button></li>
+        <li><button type="button" class="lz-spot" data-lz="1" data-x="33.0" data-y="32.3" data-box="27.7,21,65.2,35" data-what="Each platform function and workload gets its own subscription: a security and billing boundary that sits under the right management group." data-work="Helped introduce naming and tagging conventions aligned with Microsoft&#x27;s Cloud Adoption Framework, so it&#x27;s easy to tell what each subscription and resource is for"><strong>Subscriptions</strong> Naming and tagging standards</button></li>
+        <li><button type="button" class="lz-spot" data-lz="2" data-x="71.8" data-y="6.5" data-box="66,2,88,28" data-what="The platform defined as code: a Git repository and deployment pipelines that roll out the landing zones, roles and policies." data-work="Built the Bicep templates together with the team|Contributed to the GitHub deployment workflows (CI/CD) that deploy the environment|Set up private GitHub runners inside Azure so CI/CD pipelines can deploy to resources behind private endpoints"><strong>Platform DevOps</strong> Bicep, GitHub workflows and private runners</button></li>
+        <li><button type="button" class="lz-spot" data-lz="3" data-x="8.1" data-y="35.4" data-box="1,32,23,56" data-what="A dedicated home for security logs and monitoring, kept separate so security data stays protected and easy to review." data-work="Set up CrowdStrike SIEM to collect Azure monitoring data and diagnostic logs|Used Microsoft Defender for Cloud for security monitoring"><strong>Security subscription</strong> CrowdStrike SIEM and Defender for Cloud</button></li>
+        <li><button type="button" class="lz-spot" data-lz="4" data-x="8.4" data-y="58.1" data-box="1,55,23,87" data-what="Shared operations tooling for the whole platform: logs, dashboards, alerts and cost reporting." data-work="Built dashboards and Log Analytics queries|Set up alert rules and action groups so the right people are notified|Applied our tagging standard so costs can be reported by team and application"><strong>Management subscription</strong> Dashboards, alerts and cost tagging</button></li>
+        <li><button type="button" class="lz-spot" data-lz="5" data-x="36.3" data-y="37.9" data-box="29.5,35,51,62" data-what="The network hub every workload connects through. The firewall, DNS and gateways live here and are shared by all landing zones." data-work="Configured virtual networks and VNet peering|Configured private DNS zones and records so services can find each other privately|Worked through Azure Firewall rule collections and rules with teammates"><strong>Connectivity hub</strong> VNets, peering, private DNS and firewall rules</button></li>
+        <li><button type="button" class="lz-spot" data-lz="6" data-x="37.3" data-y="69.3" data-box="29.5,66,51,88" data-what="A landing zone where the platform team runs its own shared services, the same way application teams run theirs." data-work="Hosted the private GitHub runners here, so CI/CD pipelines can deploy to resources behind private endpoints|Deployed them with the team&#x27;s Bicep templates and GitHub workflows"><strong>Platform landing zone (P1)</strong> Private GitHub runners, deployed as code</button></li>
+        <li><button type="button" class="lz-spot" data-lz="7" data-x="59.4" data-y="37.4" data-box="52,34,74,90" data-what="Where application teams run their workloads. Online is for internet-facing apps; Corp is for internal apps that connect to company networks." data-work="Worked with developers deploying applications into the Online zone|Set up databases in the Corp zone|Created Azure Front Door and managed its endpoints|Stayed involved as developers began using the environment"><strong>Application landing zone</strong> App and database deployments, Front Door</button></li>
+        <li><button type="button" class="lz-spot" data-lz="8" data-x="80.7" data-y="37.5" data-box="74,34,95,59" data-what="An isolated space for testing ideas, kept apart from production networks and data." data-work="Set up sandbox subscriptions so people can experiment safely"><strong>Sandbox</strong> Sandbox subscriptions for safe experiments</button></li>
+      </ol>
+      <figure class="lz-figure">
+        <div class="lz-frame" tabindex="-1">
+          <img src="landing-zone-hub-spoke.svg?v=2" width="3693" height="1718" loading="lazy" decoding="async" alt="Microsoft's Azure landing zone reference architecture using a hub and spoke network: management groups, platform subscriptions for security, management and connectivity, and application landing zones for corp and online workloads.">
+          <div class="lz-markers"><button type="button" class="lz-marker" data-lz="0" style="left:35.0%;top:7.95%" aria-label="Zoom to 1: Management groups">1</button><button type="button" class="lz-marker" data-lz="1" style="left:33.0%;top:32.3%" aria-label="Zoom to 2: Subscriptions">2</button><button type="button" class="lz-marker" data-lz="2" style="left:71.8%;top:6.5%" aria-label="Zoom to 3: Platform DevOps">3</button><button type="button" class="lz-marker" data-lz="3" style="left:8.1%;top:35.4%" aria-label="Zoom to 4: Security subscription">4</button><button type="button" class="lz-marker" data-lz="4" style="left:8.4%;top:58.1%" aria-label="Zoom to 5: Management subscription">5</button><button type="button" class="lz-marker" data-lz="5" style="left:36.3%;top:37.9%" aria-label="Zoom to 6: Connectivity hub">6</button><button type="button" class="lz-marker" data-lz="6" style="left:37.3%;top:69.3%" aria-label="Zoom to 7: Platform landing zone (P1)">7</button><button type="button" class="lz-marker" data-lz="7" style="left:59.4%;top:37.4%" aria-label="Zoom to 8: Application landing zone">8</button><button type="button" class="lz-marker" data-lz="8" style="left:80.7%;top:37.5%" aria-label="Zoom to 9: Sandbox">9</button></div>
+        </div>
+        <figcaption>The Azure landing zone model (hub and spoke) our zones were based on. Select a number to see what each part does and what I did there.<br>Diagram © Microsoft, adapted from the <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank" rel="noopener noreferrer">Cloud Adoption Framework</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Sections removed and numbered markers added.</figcaption>
+      </figure>
+      <dialog class="lz-dialog" aria-labelledby="lz-d-title">
+        <div class="lz-d-head">
+          <div><p class="lz-d-kicker"></p><h3 id="lz-d-title"></h3><p class="lz-d-text"></p></div>
+          <button type="button" class="lz-d-close" aria-label="Close">×</button>
+        </div>
+        <div class="lz-d-body">
+          <div class="lz-d-view"><div class="lz-d-canvas"><img src="landing-zone-hub-spoke.svg?v=2" alt="" width="3693" height="1718"><span class="lz-d-markers" aria-hidden="true"></span></div></div>
+          <aside class="lz-d-work" aria-live="polite"><p class="lz-d-work-label">What I did</p><ul></ul></aside>
+        </div>
+        <div class="lz-d-foot">
+          <button type="button" class="lz-d-prev">← Previous</button>
+          <button type="button" class="lz-d-all">Whole diagram</button>
+          <button type="button" class="lz-d-next">Next →</button>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="hands-on wrap section-rule" id="hands-on" aria-labelledby="hands-on-title">
+      <p class="section-label">Where I got hands-on</p>
+      <h2 id="hands-on-title">Making it work for people.</h2>
+      <div class="hands-on-grid">
+        <article><h3>Making resources easier to understand</h3><p>I helped introduce naming and tagging conventions aligned with Microsoft’s Cloud Adoption Framework. The aim was practical: make it easier to understand what a resource is for.</p></article>
+        <article><h3>Connecting the pieces</h3><p>I configured virtual networks, VNet peering, private DNS zones, and DNS records. That networking is what let the services the team was bringing in reach each other.</p></article>
+        <article><h3>Sharing what I know</h3><p>I set up Azure Front Door and managed its endpoints. I also worked through Azure Firewall behavior with teammates, explaining how rule collections and rules support the access their services need.</p></article>
+        <article><h3>Helping developers get started</h3><p>I stayed involved as developers began using the environment, working with them on application deployments in the online zone and database setup in the corporate zone.</p></article>
+      </div>
+      <p class="hands-on-outcome"><strong>What we built together:</strong> a more structured Azure environment, resources with clearer purpose, and a foundation developers had begun using. That connection between infrastructure and the people using it is what I want to keep building.</p>
+      <a class="text-link" href="https://github.com/Azure-admin-aaron" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+    </section>
+
+    <section class="contact wrap section-rule" id="contact" aria-labelledby="contact-title">
+      <p class="section-label">Contact</p>
+      <h2 id="contact-title">Let’s connect.</h2>
+      <p>I always enjoy hearing from people who work with Azure, care about how teams build together, or are just curious about the work. Whether it’s swapping ideas, comparing notes, or exploring working together, feel free to reach out.</p>
+      <div class="actions contact-actions">
+        <a class="button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="text-link" href="index.html">Get to know me <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>© <span id="year">2026</span> Aaron Petty</span><a href="#top">Back to top ↑</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

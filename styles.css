@@ -148,3 +148,12 @@ button.lz-marker:focus-visible{outline:2px solid #0b1630;outline-offset:4px}
 .work+.section-rule{border-top-color:transparent}
 .work .lz-spot:hover{background:#fff}
 @media (max-width:850px){.work{padding-block:48px}}
+.hands-on{padding-block:56px 60px}
+.hands-on h2{font-size:36px;line-height:1.2;margin:0 0 8px;font-weight:800;text-wrap:balance}
+.hands-on-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 44px;margin:30px 0 32px}
+.hands-on-grid article{padding-left:18px;border-left:2px solid #d6e5fa}
+.hands-on-grid h3{font-size:19px;line-height:1.3;margin:0 0 10px;font-weight:700;letter-spacing:-.03em}
+.hands-on-grid p,.hands-on-outcome{font-size:16px;line-height:1.65;color:var(--body);margin:0}
+.hands-on-outcome{background:#f2f7ff;border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:22px}
+.hands-on-outcome strong{color:var(--ink)}
+@media (max-width:850px){.hands-on{padding-block:44px}.hands-on h2{font-size:30px}.hands-on-grid{grid-template-columns:1fr;gap:24px}}
