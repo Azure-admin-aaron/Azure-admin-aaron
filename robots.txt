@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://azure-admin-aaron.github.io/Azure-admin-aaron/sitemap.xml
