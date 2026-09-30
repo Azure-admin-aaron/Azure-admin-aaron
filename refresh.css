@@ -80,3 +80,11 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
 .lz-magnify:hover,.lz-magnify[aria-pressed="true"]{background:var(--blue);color:#fff}
 .lz-magnify:focus-visible{outline:3px solid #0b1630;outline-offset:3px}
 .lz-hint{display:inline}
+
+/* Let desktop hero copy determine its height so headings and actions stay visible. */
+@media(min-width:1001px){
+ .mock-hero{height:auto;min-height:494px}
+ .mock-hero-copy{padding-bottom:40px}
+ .hero-photo{height:auto;align-self:stretch}
+ .hero-photo img{position:absolute;inset:0}
+}
