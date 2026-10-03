@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aaron Petty's Raspberry Pi home lab: exploring Docker, DNS, reverse proxying, and what small experiments teach along the way.">
+  <title>Raspberry Pi Home Lab — Aaron Petty</title>
+  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="navigation.css?v=2">
+  <link rel="stylesheet" href="refresh.css?v=4">
+  <link rel="stylesheet" href="project-pages.css?v=1">
+  <script src="navigation.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="portfolio-header"><div class="navigation-inner">
+    <a class="portfolio-brand" href="index.html" aria-label="Aaron Petty, home">Aaron Petty</a>
+    <nav class="portfolio-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Projects</a><a class="navigation-contact" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Contact<span class="sr-only"> (opens LinkedIn in a new tab)</span></a></nav>
+  </div></header>
+  <main id="main" class="project-pages">
+    <section class="lab-hero wrap" id="top" aria-labelledby="page-title">
+      <div><a class="project-back" href="projects.html">← All projects</a><p class="section-label">PERSONAL EXPERIMENT · RASPBERRY PI</p><h1 id="page-title">A small server.<br>A lot to learn.</h1><p>A Raspberry Pi at home makes a good place to ask “what if?” Docker services, DNS, and a reverse proxy turn small experiments into lessons about how the pieces connect.</p><a class="text-link" href="#setup">Explore the setup <span aria-hidden="true">↓</span></a></div>
+      <div class="lab-hero-art" aria-hidden="true"><div class="lab-device"><span class="lab-device-light"></span><span class="lab-device-slot"></span><span class="lab-device-mark">pi</span></div><span class="lab-device-shadow"></span></div>
+    </section>
+    <section class="lab-story wrap section-rule" id="setup" aria-labelledby="setup-title">
+      <div class="lab-story-intro"><p class="section-label">HOW IT FITS TOGETHER</p><h2 id="setup-title">A place to try things out.</h2><p>The Pi provides a place to run services. Docker makes them easier to set up and revisit. Working through DNS and a reverse proxy has been a way to understand how names, requests, and services meet on a home network.</p></div>
+      <div class="lab-map" role="img" aria-label="Simplified home lab map: devices on the home network connect through DNS and a reverse proxy to Docker services running on a Raspberry Pi.">
+        <div class="lab-map-node lab-map-home"><span class="lab-map-icon" aria-hidden="true">⌂</span><strong>Home network</strong><small>Where requests begin</small></div>
+        <span class="lab-map-arrow" aria-hidden="true">→</span>
+        <div class="lab-map-node"><span class="lab-map-icon" aria-hidden="true">◎</span><strong>DNS</strong><small>Finding a name</small></div>
+        <span class="lab-map-arrow" aria-hidden="true">→</span>
+        <div class="lab-map-node"><span class="lab-map-icon" aria-hidden="true">↗</span><strong>Reverse proxy</strong><small>Routing the request</small></div>
+        <span class="lab-map-arrow" aria-hidden="true">→</span>
+        <div class="lab-map-node lab-map-pi"><span class="lab-map-icon" aria-hidden="true">◈</span><strong>Raspberry Pi</strong><small>Docker services</small></div>
+      </div>
+      <p class="lab-map-caption">A simplified view of the ideas being explored, rather than a full network diagram.</p>
+    </section>
+    <section class="lab-lessons wrap section-rule" aria-labelledby="lessons-title"><p class="section-label">WHAT MAKES IT USEFUL</p><h2 id="lessons-title">The learning is the project.</h2><div class="lab-lessons-grid">
+      <article><span class="lab-step">01</span><h3>Follow a request</h3><p>When a service is hard to reach, trace the path from a name on the network to the service behind it. Each step gives a better question to ask.</p></article>
+      <article><span class="lab-step">02</span><h3>Keep the pieces understandable</h3><p>Containers make it possible to try a service, adjust it, and return to it later. Keeping notes turns a one-off fix into something useful next time.</p></article>
+      <article><span class="lab-step">03</span><h3>Share the questions</h3><p>Home labs are full of small surprises. The interesting part is comparing approaches and learning how someone else solved a similar problem.</p></article>
+    </div></section>
+    <section class="lab-note wrap section-rule"><div><h2>Still a work in progress.</h2><p>This is an ongoing personal lab, not a finished product. The working repository is private; the <a href="https://github.com/Azure-admin-aaron/Azure-admin-aaron" target="_blank" rel="noopener noreferrer">public GitHub profile<span class="sr-only"> (opens in a new tab)</span></a> shares more about the curiosity behind it.</p></div><a class="text-link" href="work.html#story">Explore the Azure project <span aria-hidden="true">→</span></a></section>
+    <section class="projects-close wrap"><h2>Working on a home lab too?</h2><p>Whether you have a question or a lesson learned, I’d enjoy hearing about it.</p><a class="button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Compare notes <span aria-hidden="true">↗</span><span class="sr-only"> (opens LinkedIn in a new tab)</span></a></section>
+  </main>
+  <footer class="site-footer wrap"><span>© <span id="year">2026</span> Aaron Petty</span><a href="#top">Back to top ↑</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
