@@ -64,7 +64,7 @@
  .lab-story,.lab-lessons{padding-block:50px}
  .lab-map{display:grid;grid-template-columns:1fr;justify-items:stretch;padding:20px}
  .lab-map-node{min-height:96px}
- .lab-map-arrow{transform:rotate(90deg);line-height:1;height:22px}
+ .lab-map-arrow{display:block;justify-self:center;width:22px;height:22px;text-align:center;transform:rotate(90deg);line-height:1}
  .lab-lessons-grid{grid-template-columns:1fr;gap:26px}
  .lab-note{display:block;padding-block:45px}
  .lab-note>.text-link{margin-top:18px}
