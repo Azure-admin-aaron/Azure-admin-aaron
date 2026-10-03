@@ -39,6 +39,11 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
 .project-results span{font-size:15px;color:var(--ink);line-height:1.45}
 .project-results br{display:none}
 .project-photo{border-radius:3px}
+.project-workbench{min-width:0;margin:0;align-self:center}
+.project-workbench img{display:block;width:100%;height:auto;border-radius:3px}
+.project-workbench figcaption{margin:18px 8px 0;color:var(--body);font-size:14px;line-height:1.6}
+.project-workbench figcaption strong{display:block;margin-bottom:3px;color:var(--ink);font-weight:600}
+.project-copy>p.project-explore-note{margin-top:14px;color:var(--body);font-size:13px;line-height:1.5}
 
 /* Current focus */
 .work-detail{border-top:0;padding-top:20px}
