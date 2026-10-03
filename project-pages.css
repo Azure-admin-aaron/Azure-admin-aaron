@@ -1,0 +1,71 @@
+.project-pages{--lab-ink:#10243d;--lab-muted:#45566d;--lab-tint:#f2f7ff}
+.project-pages h1,.project-pages h2,.project-pages h3{font-family:'Fraunces',Georgia,serif;color:var(--lab-ink);letter-spacing:-.025em;font-weight:600}
+.project-pages p{line-height:1.65;color:var(--lab-muted)}
+.project-pages .section-label{color:#3767a1;font:700 11px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.17em}
+.projects-intro{padding-block:82px 62px}
+.projects-intro h1{max-width:780px;font-size:clamp(43px,5vw,66px);line-height:1.08;margin:0 0 20px}
+.projects-intro>p:last-child{max-width:700px;font-size:18px;margin:0}
+.project-list{display:grid;gap:24px;padding-bottom:80px}
+.project-card{display:grid;grid-template-columns:1.15fr 1fr;min-height:350px;border:1px solid #dce5f1;border-radius:12px;overflow:hidden;background:#fff}
+.project-card-copy{padding:50px 54px;align-self:center}
+.project-card-copy h2{font-size:clamp(29px,3vw,39px);line-height:1.13;margin:0 0 16px}
+.project-card-copy>p:not(.section-label){max-width:470px;margin:0 0 20px;font-size:16px}
+.project-card-art{display:grid;place-items:center;min-width:0}
+.azure-card-art{background:#f4f8ff}
+.azure-card-art img{display:block;width:min(80%,390px);height:auto}
+.lab-card-art{background:radial-gradient(circle at 55% 42%,#e6f0ff 0,#dceafd 40%,#cddff4 100%);position:relative;overflow:hidden}
+.lab-glyph{font:600 122px/1 Georgia,serif;color:#0759e6;transform:rotate(-12deg);text-shadow:15px 18px 0 #7fb0eb36}
+.lab-mini{position:absolute;bottom:32px;font-size:13px;font-weight:600;letter-spacing:.05em;color:#375d8d}
+.projects-close{padding-block:56px 80px;border-top:1px solid var(--line)}
+.projects-close h2{font-size:clamp(30px,3.4vw,40px);margin:0 0 10px}
+.projects-close p{font-size:17px;margin:0 0 22px}
+.lab-hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px;padding-block:74px 86px;min-height:530px}
+.project-back{display:inline-flex;align-items:center;min-height:44px;margin-bottom:24px;color:#0759e6;font-weight:600;font-size:14px}
+.project-back:hover{text-decoration:underline}
+.lab-hero h1{font-size:clamp(47px,5vw,68px);line-height:1.05;margin:0 0 20px}
+.lab-hero p:not(.section-label){font-size:18px;max-width:540px;margin:0 0 22px}
+.lab-hero-art{height:345px;border-radius:18px;background:radial-gradient(circle at 50% 42%,#e9f4ff 0,#dbeafe 45%,#cbdff4 100%);display:grid;place-items:center;position:relative;overflow:hidden}
+.lab-device{width:230px;height:220px;position:relative;z-index:1;border-radius:25px;background:linear-gradient(138deg,#233344,#0e1b2a 65%);box-shadow:18px 22px 0 #829eb97a,20px 33px 40px #344f7180;transform:rotate(-8deg);border:8px solid #2d3e50}
+.lab-device:before{content:'';position:absolute;inset:22px;border:2px solid #55677c;border-radius:50%}
+.lab-device-light{position:absolute;left:25px;top:24px;width:11px;height:11px;border-radius:50%;background:#8fe0ba;box-shadow:0 0 10px #8fe0ba}
+.lab-device-slot{position:absolute;right:25px;bottom:28px;width:56px;height:8px;border-radius:8px;background:#607388}
+.lab-device-mark{position:absolute;inset:0;display:grid;place-items:center;color:#a8c9e7;font:600 76px/1 Georgia,serif;letter-spacing:-.1em}
+.lab-story,.lab-lessons{padding-block:68px 76px}
+.lab-story-intro{max-width:710px}
+.lab-story h2,.lab-lessons h2,.lab-note h2{font-size:clamp(31px,3.5vw,43px);line-height:1.16;margin:0 0 16px}
+.lab-story-intro>p:last-child{font-size:17px;margin:0 0 38px}
+.lab-map{display:flex;align-items:stretch;gap:10px;padding:30px;border-radius:14px;background:#f2f7ff;border:1px solid #dce8f8}
+.lab-map-node{flex:1;min-width:0;min-height:142px;padding:19px 12px;border-radius:10px;background:#fff;border:1px solid #d7e3f2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 6px 18px #1237630a}
+.lab-map-node strong{font-size:15px;color:var(--lab-ink)}
+.lab-map-node small{font-size:12px;line-height:1.4;color:#61718a;margin-top:4px}
+.lab-map-icon{font-size:30px;line-height:1;color:#0759e6;margin-bottom:12px}
+.lab-map-arrow{align-self:center;color:#6e9bd0;font-size:25px}
+.lab-map-caption{font-size:13px;margin:13px 0 0}
+.lab-lessons-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:35px}
+.lab-lessons-grid article{border-top:2px solid #123253;padding-top:20px}
+.lab-step{font-size:13px;color:#3974bb;font-weight:700;letter-spacing:.12em}
+.lab-lessons-grid h3{font-size:23px;margin:16px 0 10px}
+.lab-lessons-grid p{font-size:15px;margin:0}
+.lab-note{padding-block:58px;display:flex;justify-content:space-between;align-items:center;gap:40px}
+.lab-note>div{max-width:650px}
+.lab-note p{margin:0}
+.lab-note p a{color:#0759e6;text-decoration:underline;text-underline-offset:3px}
+.lab-note>.text-link{white-space:nowrap}
+.current-focus .text-link{font-size:15px;min-height:0}
+@media(max-width:760px){
+ .projects-intro{padding-block:54px 40px}
+ .project-card{grid-template-columns:1fr}
+ .project-card-copy{padding:35px 30px}
+ .project-card-art{min-height:220px}
+ .azure-card-art img{width:min(58%,260px)}
+ .lab-glyph{font-size:95px}
+ .lab-hero{grid-template-columns:1fr;gap:32px;padding-block:42px 58px}
+ .lab-hero-art{height:280px}
+ .lab-story,.lab-lessons{padding-block:50px}
+ .lab-map{display:grid;grid-template-columns:1fr;justify-items:stretch;padding:20px}
+ .lab-map-node{min-height:96px}
+ .lab-map-arrow{transform:rotate(90deg);line-height:1;height:22px}
+ .lab-lessons-grid{grid-template-columns:1fr;gap:26px}
+ .lab-note{display:block;padding-block:45px}
+ .lab-note>.text-link{margin-top:18px}
+}
