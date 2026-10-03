@@ -82,6 +82,7 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
 .lz-stage.is-zoomable{cursor:auto}
 .lz-stage.is-zoomed{cursor:zoom-out}
 .lz-frame{position:relative}
+#diagram{scroll-margin-top:90px}
 .lz-magnify{position:absolute;z-index:5;top:26px;right:26px;min-height:40px;padding:8px 16px;border:0;border-radius:6px;background:#fff;color:var(--blue);font:600 14px/1 'DM Sans',Arial,sans-serif;box-shadow:inset 0 0 0 1.5px var(--blue),0 4px 12px #0b2a6620;cursor:pointer}
 .lz-magnify:hover,.lz-magnify[aria-pressed="true"]{background:var(--blue);color:#fff}
 .lz-magnify:focus-visible{outline:3px solid #0b1630;outline-offset:3px}
