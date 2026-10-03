@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="styles.css?v=9">
   <link rel="stylesheet" href="navigation.css?v=2">
   <link rel="stylesheet" href="refresh.css?v=4">
-  <link rel="stylesheet" href="project-pages.css?v=2">
+  <link rel="stylesheet" href="project-pages.css?v=4">
   <script src="navigation.js?v=2" defer></script>
+  <script src="project-interactions.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,16 +25,17 @@
     </section>
     <section class="lab-story wrap section-rule" id="setup" aria-labelledby="setup-title">
       <div class="lab-story-intro"><p class="section-label">HOW IT FITS TOGETHER</p><h2 id="setup-title">A place to try things out.</h2><p>The Pi provides a place to run services. Docker makes them easier to set up and revisit. Working through DNS and a reverse proxy has been a way to understand how names, requests, and services meet on a home network.</p></div>
-      <div class="lab-map" role="img" aria-label="Simplified home lab map: devices on the home network connect through DNS and a reverse proxy to Docker services running on a Raspberry Pi.">
-        <div class="lab-map-node lab-map-home"><span class="lab-map-icon" aria-hidden="true">⌂</span><strong>Home network</strong><small>Where requests begin</small></div>
+      <div class="lab-map" role="group" aria-label="Trace a request through the home lab">
+        <button class="lab-map-node lab-map-home is-active" type="button" data-lab-step="0" aria-pressed="true"><span class="lab-map-icon" aria-hidden="true">⌂</span><strong>Home network</strong><small>Where requests begin</small></button>
         <span class="lab-map-arrow" aria-hidden="true">→</span>
-        <div class="lab-map-node"><span class="lab-map-icon" aria-hidden="true">◎</span><strong>DNS</strong><small>Finding a name</small></div>
+        <button class="lab-map-node" type="button" data-lab-step="1" aria-pressed="false"><span class="lab-map-icon" aria-hidden="true">◎</span><strong>DNS</strong><small>Finding a name</small></button>
         <span class="lab-map-arrow" aria-hidden="true">→</span>
-        <div class="lab-map-node"><span class="lab-map-icon" aria-hidden="true">↗</span><strong>Reverse proxy</strong><small>Routing the request</small></div>
+        <button class="lab-map-node" type="button" data-lab-step="2" aria-pressed="false"><span class="lab-map-icon" aria-hidden="true">↗</span><strong>Reverse proxy</strong><small>Routing the request</small></button>
         <span class="lab-map-arrow" aria-hidden="true">→</span>
-        <div class="lab-map-node lab-map-pi"><span class="lab-map-icon" aria-hidden="true">◈</span><strong>Raspberry Pi</strong><small>Docker services</small></div>
+        <button class="lab-map-node lab-map-pi" type="button" data-lab-step="3" aria-pressed="false"><span class="lab-map-icon" aria-hidden="true">◈</span><strong>Docker service</strong><small>Running on the Pi</small></button>
       </div>
-      <p class="lab-map-caption">A simplified view of the ideas being explored, rather than a full network diagram.</p>
+      <div class="lab-step-detail" aria-live="polite"><span class="lab-detail-count">01 / 04</span><div><h3>Start with a name</h3><p>A device on the home network asks for a service by name. Select another step to follow where that request goes.</p></div></div>
+      <p class="lab-map-caption">A simplified request journey. DNS, the reverse proxy, and the destination service can all run on the Raspberry Pi.</p>
     </section>
     <section class="lab-lessons wrap section-rule" aria-labelledby="lessons-title"><p class="section-label">WHAT MAKES IT USEFUL</p><h2 id="lessons-title">The learning is the project.</h2><div class="lab-lessons-grid">
       <article><span class="lab-step">01</span><h3>Follow a request</h3><p>When a service is hard to reach, trace the path from a name on the network to the service behind it. Each step gives a better question to ask.</p></article>

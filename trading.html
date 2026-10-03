@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="styles.css?v=9">
   <link rel="stylesheet" href="navigation.css?v=2">
   <link rel="stylesheet" href="refresh.css?v=4">
-  <link rel="stylesheet" href="project-pages.css?v=3">
+  <link rel="stylesheet" href="project-pages.css?v=4">
   <script src="navigation.js?v=2" defer></script>
+  <script src="project-interactions.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,13 +25,14 @@
     </section>
     <section class="trading-flow wrap section-rule" id="flow" aria-labelledby="flow-title"><p class="section-label">THE WORKFLOW</p><h2 id="flow-title">Different jobs, shared context.</h2><p class="trading-section-intro">Each stage passes evidence to the next. The roles have deliberately different permissions, so finding an idea is separate from approving and placing a paper order.</p>
       <ol class="agent-flow">
-        <li><span class="agent-number">01</span><h3>Screener</h3><p>Finds possible candidates to investigate. A candidate is a starting point, not a trade.</p></li>
-        <li><span class="agent-number">02</span><h3>Hunter</h3><p>Gathers company and news context, then records the research features available.</p></li>
-        <li><span class="agent-number">03</span><h3>Mathlete</h3><p>Calculates technical indicators from completed daily market data.</p></li>
-        <li class="agent-gate"><span class="agent-number">04 · INDEPENDENT CHECK</span><h3>Brake</h3><p>Applies risk rules. It can veto a proposal or issue a short-lived, one-use approval.</p></li>
-        <li><span class="agent-number">05</span><h3>Sniper</h3><p>Checks the approval and paper-broker state again before submitting an allowed order.</p></li>
-        <li><span class="agent-number">06</span><h3>Reconciler</h3><p>Compares broker activity with local records and flags inconsistencies.</p></li>
+        <li><span class="agent-number">01</span><h3>Screener</h3><p>Finds possible candidates to investigate. A candidate is a starting point, not a trade.</p><button class="agent-explore" type="button" data-agent-step="0" aria-pressed="false">Explore this role <span aria-hidden="true">→</span></button></li>
+        <li><span class="agent-number">02</span><h3>Hunter</h3><p>Gathers company and news context, then records the research features available.</p><button class="agent-explore" type="button" data-agent-step="1" aria-pressed="false">Explore this role <span aria-hidden="true">→</span></button></li>
+        <li><span class="agent-number">03</span><h3>Mathlete</h3><p>Calculates technical indicators from completed daily market data.</p><button class="agent-explore" type="button" data-agent-step="2" aria-pressed="false">Explore this role <span aria-hidden="true">→</span></button></li>
+        <li class="agent-gate is-active"><span class="agent-number">04 · INDEPENDENT CHECK</span><h3>Brake</h3><p>Applies risk rules. It can veto a proposal or issue a short-lived, one-use approval.</p><button class="agent-explore" type="button" data-agent-step="3" aria-pressed="true">Explore this role <span aria-hidden="true">→</span></button></li>
+        <li><span class="agent-number">05</span><h3>Sniper</h3><p>Checks the approval and paper-broker state again before submitting an allowed order.</p><button class="agent-explore" type="button" data-agent-step="4" aria-pressed="false">Explore this role <span aria-hidden="true">→</span></button></li>
+        <li><span class="agent-number">06</span><h3>Reconciler</h3><p>Compares broker activity with local records and flags inconsistencies.</p><button class="agent-explore" type="button" data-agent-step="5" aria-pressed="false">Explore this role <span aria-hidden="true">→</span></button></li>
       </ol>
+      <div class="agent-detail" aria-live="polite"><span class="agent-detail-count">04 / 06 · INDEPENDENT CHECK</span><div><h3>Brake checks the proposal</h3><p class="agent-detail-copy">It reviews a proposed paper trade against risk rules and current state. Missing or conflicting input means no approval.</p><p class="agent-detail-boundary"><strong>Boundary:</strong> <span>Brake may issue one short-lived approval, but it cannot place an order.</span></p></div></div>
       <p class="agent-chief"><strong>And a translator:</strong> Chief helps turn research and system output into a human-readable briefing. It does not approve risk or place orders.</p>
     </section>
     <section class="trading-boundaries wrap section-rule" aria-labelledby="boundaries-title"><div class="trading-boundaries-intro"><p class="section-label">WHY THE BOUNDARIES MATTER</p><h2 id="boundaries-title">Useful automation should be easy to question.</h2><p>“AI agents” describes the collaboration, but not every decision is left to AI. Some stages collect or summarize information; the risk gate, approval checks, and audit trail are explicit controls.</p></div><div class="trading-guardrails">
