@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="A shared Azure landing zone project, with practical contributions across networking, security, automation, and application delivery.">
+  <meta name="description" content="An Azure project from our cloud team: how the parts fit together, where I helped, and a few things to carry into the next project.">
   <title>Projects — Aaron Petty</title>
   <link rel="stylesheet" href="styles.css?v=9">
   <link rel="stylesheet" href="navigation.css?v=2">
-  <link rel="stylesheet" href="refresh.css?v=3">
+  <link rel="stylesheet" href="refresh.css?v=4">
   <link rel="stylesheet" href="lz-mobile.css?v=1">
   <script src="navigation.js?v=2" defer></script>
   <script src="lz-viewer.js?v=8" defer></script>
@@ -30,7 +30,7 @@
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title">Azure<br>foundations<br><span>teams can build on.</span></h1>
-        <p>A closer look at the Azure platform our cloud team built, and my contributions to its networking, automation, access, and application delivery.</p>
+        <p>A closer look at a project our cloud team worked on: bringing clearer structure to Azure and helping developers use it.</p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <img src="hero-graphic.svg" width="480" height="460" alt="" decoding="async" fetchpriority="high">
@@ -41,7 +41,7 @@
       <div class="work-copy">
         <h2 id="work-title">Making room to build.</h2>
         <p>The starting point was an Azure environment with limited documentation and resources that were difficult to identify. Our cloud team reshaped it around landing zones and a shared approach to deployment.</p>
-        <p>I configured networking and private DNS, audited access, and built Bicep templates with the team. I also worked with developers on application and database deployments. Select a number in the diagram to see how each part works and what I contributed.</p>
+        <p>My part included networking, private DNS, access audits, and Bicep templates, along with application and database work with developers. The diagram walks through the wider platform, with notes on where I helped.</p>
       </div>
       <ol class="lz-legend" aria-label="Project contributions within the landing zone model">
         <li><button type="button" class="lz-spot" data-lz="0" data-x="35.0" data-y="7.95" data-box="27.7,3.5,65.2,22" data-what="The top of the structure. Management groups organize subscriptions so access, policy and cost rules apply consistently to everything below them." data-work="Worked with my cloud team to shape the hierarchy for the platform, management, online and corporate landing zones|Audited identity and access: who holds which roles, and how that access is granted"><strong>Management groups</strong> Landing zone hierarchy and access audits</button></li>
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <figcaption>The Azure landing zone model (hub and spoke) our zones were based on. Select a number to explore its purpose and my contribution to the shared project.<span class="lz-hint"> Use Magnify to look closer, or select a number to open its details.</span><br>Diagram © Microsoft, adapted from the <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank" rel="noopener noreferrer">Cloud Adoption Framework</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Sections removed and numbered markers added.</figcaption>
+        <figcaption>The Azure landing zone model (hub and spoke) our zones were based on. Choose a number to explore how that part works and where I helped.<span class="lz-hint"> Use Magnify to look closer, or select a number to open its details.</span><br>Diagram © Microsoft, adapted from the <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank" rel="noopener noreferrer">Cloud Adoption Framework</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Sections removed and numbered markers added.</figcaption>
       </figure>
       <dialog class="lz-dialog" aria-labelledby="lz-d-title">
         <div class="lz-d-head">
@@ -76,7 +76,7 @@
         </div>
         <div class="lz-d-body">
           <div class="lz-d-view"><div class="lz-d-canvas"><img src="landing-zone-hub-spoke.svg?v=3" alt="" width="3693" height="1718"><span class="lz-d-markers" aria-hidden="true"></span></div></div>
-          <aside class="lz-d-work" aria-live="polite"><p class="lz-d-work-label">My contribution</p><ul></ul></aside>
+          <aside class="lz-d-work" aria-live="polite"><p class="lz-d-work-label">Where I helped</p><ul></ul></aside>
         </div>
         <div class="lz-d-foot">
           <button type="button" class="lz-d-prev">← Previous</button>
@@ -87,20 +87,20 @@
     </section>
 
     <section class="hands-on wrap section-rule" id="hands-on" aria-labelledby="hands-on-title">
-      <h2 id="hands-on-title">Putting the foundation to work.</h2>
+      <h2 id="hands-on-title">A few things to carry forward.</h2>
       <div class="hands-on-grid">
-        <article><h3>Repeatable deployments</h3><p>I built Bicep templates with the team and contributed to the GitHub workflows that deploy them. Hosting private GitHub runners in the platform landing zone let those pipelines reach resources behind private endpoints.</p></article>
-        <article><h3>Connected applications</h3><p>I configured virtual networks, peering, and private DNS, then worked with developers deploying applications into the Online zone and set up databases in the Corp zone.</p></article>
-        <article><h3>Access people could understand</h3><p>I audited who held which roles and how access was granted. Working through Azure Firewall rules with teammates helped connect the configuration to the access their services needed.</p></article>
-        <article><h3>Visibility after deployment</h3><p>I built dashboards and Log Analytics queries, configured alerts and action groups, and used resource tags to report costs by team and application.</p></article>
+        <article><h3>A shared way to make changes</h3><p>Bicep templates and GitHub workflows gave the team a common place to define deployments. Private runners connected that process to resources behind private endpoints.</p></article>
+        <article><h3>Start with what people need</h3><p>Application and database deployments gave the network work a practical purpose. Working with developers helped connect decisions about connectivity to the services they needed to run.</p></article>
+        <article><h3>Make room for questions</h3><p>Access audits helped clarify who could reach which resources. Working through firewall rules with teammates was also a chance to understand why the access was needed.</p></article>
+        <article><h3>Look beyond deployment</h3><p>Dashboards, Log Analytics queries, alerts, and cost tags made the environment easier to follow. Deployment was one part of the work; understanding what happened afterward mattered too.</p></article>
       </div>
-      <p class="hands-on-outcome"><strong>Built together:</strong> these were my contributions to a wider team effort. The useful part was connecting the platform decisions to the people deploying, operating, and building on the environment.</p>
+      <p class="hands-on-outcome"><strong>For the next project:</strong> keep the technical work understandable, stay close to the people using it, and leave room for questions. There’s always more to learn together.</p>
       <a class="text-link" href="https://github.com/Azure-admin-aaron" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
     </section>
 
     <section class="contact wrap section-rule" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Let’s connect.</h2>
-      <p>Have a similar platform challenge or an approach worth sharing? Let’s talk through the technical choices and what helped your team move forward.</p>
+      <h2 id="contact-title">Let’s compare notes.</h2>
+      <p>Working through something similar, or curious about a part of the diagram? You’re welcome to ask a question or share a different approach.</p>
       <div class="actions contact-actions">
         <a class="button" href="https://www.linkedin.com/in/aaron-petty-a0a09860" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
         <a class="text-link" href="index.html">Get to know me <span aria-hidden="true">→</span></a>
