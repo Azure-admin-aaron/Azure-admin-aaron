@@ -7,11 +7,13 @@
 .projects-intro>p:last-child{max-width:700px;font-size:18px;margin:0}
 .project-list{display:grid;gap:24px;padding-bottom:80px}
 .project-card{display:grid;grid-template-columns:1.15fr 1fr;min-height:350px;border:1px solid #dce5f1;border-radius:12px;overflow:hidden;background:#fff}
-.project-card-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:50px 54px;color:var(--lab-ink);text-decoration:none}
-.project-card-copy:focus-visible{outline:3px solid #0759e6;outline-offset:-7px;border-radius:7px}
+.project-card-copy{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:50px 54px;color:var(--lab-ink)}
+.project-card-copy:focus-within{outline:3px solid #0759e6;outline-offset:-7px;border-radius:7px}
 .project-card-copy h2{font-size:clamp(29px,3vw,39px);line-height:1.13;margin:0 0 16px}
 .project-card-copy>p:not(.section-label){max-width:470px;margin:0 0 20px;font-size:16px}
 .card-cta{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:#0058d5;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#9dbff0;text-underline-offset:7px;text-decoration-thickness:1px}
+.card-cta:after{content:'';position:absolute;inset:0}
+.project-card-copy .card-cta:focus-visible{outline:none}
 .card-cta span{transition:transform .2s ease}
 .project-card-copy:hover .card-cta{text-decoration-color:currentColor}
 .project-card-copy:hover .card-cta span,.project-card-copy:focus-visible .card-cta span{transform:translateX(4px)}
