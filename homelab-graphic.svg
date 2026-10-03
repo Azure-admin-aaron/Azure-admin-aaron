@@ -44,8 +44,8 @@
 <text x="61" y="241" fill="#c5ded4" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5">PI LAB</text>
 </g>
 <!-- Service hints use the Azure palette, while the hardware keeps its own identity. -->
-<g filter="url(#soft)"><rect x="47" y="91" width="104" height="29" rx="14.5" fill="#fff" stroke="#a4bfee"/><circle cx="65" cy="105.5" r="5" fill="#0759e6"/><text x="78" y="110" fill="#1455bb" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">LOCAL DNS</text></g>
-<path class="signal" d="M151 105c29 0 41 12 49 28" stroke="#0759e6" stroke-width="2" stroke-linecap="round"/>
+<g filter="url(#soft)"><rect x="47" y="91" width="89" height="29" rx="14.5" fill="#fff" stroke="#a4bfee"/><circle cx="65" cy="105.5" r="5" fill="#0759e6"/><text x="78" y="110" fill="#1455bb" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">DOCKER</text></g>
+<path class="signal" d="M136 105c35 0 54 12 64 28" stroke="#0759e6" stroke-width="2" stroke-linecap="round"/>
 <g filter="url(#soft)"><rect x="310" y="402" width="112" height="29" rx="14.5" fill="#fff" stroke="#a4bfee"/><circle cx="329" cy="416.5" r="5" fill="#22a573"/><text x="342" y="421" fill="#1455bb" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">SERVICES</text></g>
 <path class="signal" d="M300 390c18 0 24 5 28 12" stroke="#0759e6" stroke-width="2" stroke-linecap="round"/>
 <circle cx="43" cy="181" r="3" fill="#0759e6"/><circle cx="434" cy="152" r="2.5" fill="#0759e6"/>
