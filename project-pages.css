@@ -7,15 +7,17 @@
 .projects-intro>p:last-child{max-width:700px;font-size:18px;margin:0}
 .project-list{display:grid;gap:24px;padding-bottom:80px}
 .project-card{display:grid;grid-template-columns:1.15fr 1fr;min-height:350px;border:1px solid #dce5f1;border-radius:12px;overflow:hidden;background:#fff}
-.project-card-copy{padding:50px 54px;align-self:center}
+.project-card-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:50px 54px;color:var(--lab-ink);text-decoration:none}
+.project-card-copy:focus-visible{outline:3px solid #0759e6;outline-offset:-7px;border-radius:7px}
 .project-card-copy h2{font-size:clamp(29px,3vw,39px);line-height:1.13;margin:0 0 16px}
 .project-card-copy>p:not(.section-label){max-width:470px;margin:0 0 20px;font-size:16px}
+.card-cta{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:#0058d5;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:#9dbff0;text-underline-offset:7px;text-decoration-thickness:1px}
+.card-cta span{transition:transform .2s ease}
+.project-card-copy:hover .card-cta{text-decoration-color:currentColor}
+.project-card-copy:hover .card-cta span,.project-card-copy:focus-visible .card-cta span{transform:translateX(4px)}
 .project-card-art{display:grid;place-items:center;min-width:0}
-.azure-card-art{background:#f4f8ff}
-.azure-card-art img{display:block;width:min(80%,390px);height:auto}
-.lab-card-art{background:radial-gradient(circle at 55% 42%,#e6f0ff 0,#dceafd 40%,#cddff4 100%);position:relative;overflow:hidden}
-.lab-glyph{font:600 122px/1 Georgia,serif;color:#0759e6;transform:rotate(-12deg);text-shadow:15px 18px 0 #7fb0eb36}
-.lab-mini{position:absolute;bottom:32px;font-size:13px;font-weight:600;letter-spacing:.05em;color:#375d8d}
+.azure-card-art,.lab-card-art,.trading-card-art{background:#f4f8ff}
+.project-card-art img{display:block;width:min(80%,390px);height:auto}
 .projects-close{padding-block:56px 80px;border-top:1px solid var(--line)}
 .projects-close h2{font-size:clamp(30px,3.4vw,40px);margin:0 0 10px}
 .projects-close p{font-size:17px;margin:0 0 22px}
@@ -24,12 +26,8 @@
 .project-back:hover{text-decoration:underline}
 .lab-hero h1{font-size:clamp(47px,5vw,68px);line-height:1.05;margin:0 0 20px}
 .lab-hero p:not(.section-label){font-size:18px;max-width:540px;margin:0 0 22px}
-.lab-hero-art{height:345px;border-radius:18px;background:radial-gradient(circle at 50% 42%,#e9f4ff 0,#dbeafe 45%,#cbdff4 100%);display:grid;place-items:center;position:relative;overflow:hidden}
-.lab-device{width:230px;height:220px;position:relative;z-index:1;border-radius:25px;background:linear-gradient(138deg,#233344,#0e1b2a 65%);box-shadow:18px 22px 0 #829eb97a,20px 33px 40px #344f7180;transform:rotate(-8deg);border:8px solid #2d3e50}
-.lab-device:before{content:'';position:absolute;inset:22px;border:2px solid #55677c;border-radius:50%}
-.lab-device-light{position:absolute;left:25px;top:24px;width:11px;height:11px;border-radius:50%;background:#8fe0ba;box-shadow:0 0 10px #8fe0ba}
-.lab-device-slot{position:absolute;right:25px;bottom:28px;width:56px;height:8px;border-radius:8px;background:#607388}
-.lab-device-mark{position:absolute;inset:0;display:grid;place-items:center;color:#a8c9e7;font:600 76px/1 Georgia,serif;letter-spacing:-.1em}
+.lab-hero-art,.trading-hero-art{min-width:0}
+.lab-hero-art img,.trading-hero-art img{display:block;width:100%;height:auto}
 .lab-story,.lab-lessons{padding-block:68px 76px}
 .lab-story-intro{max-width:710px}
 .lab-story h2,.lab-lessons h2,.lab-note h2{font-size:clamp(31px,3.5vw,43px);line-height:1.16;margin:0 0 16px}
@@ -52,21 +50,11 @@
 .lab-note p a{color:#0759e6;text-decoration:underline;text-underline-offset:3px}
 .lab-note>.text-link{white-space:nowrap}
 .current-focus .text-link{font-size:15px;min-height:0}
-.trading-card-art{display:flex;gap:10px;align-items:center;justify-content:center;background:linear-gradient(140deg,#eaf3ff,#dce9f9);padding:30px}
-.trading-art-node{display:grid;place-items:center;min-width:88px;min-height:88px;padding:10px;border:1px solid #a9c2e1;border-radius:50%;background:#fff;color:#1b477b;font-size:13px;font-weight:700;text-align:center;box-shadow:0 10px 24px #18437414}
-.trading-art-brake{background:#174d89;color:#fff;border-color:#174d89}
-.trading-art-path{width:23px;height:2px;background:#7aa5d5;flex:none}
 .trading-hero{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:52px;min-height:555px;padding-block:72px 84px}
 .trading-hero h1{font-size:clamp(42px,4.8vw,65px);line-height:1.06;margin:0 0 20px}
 .trading-hero p:not(.section-label):not(.trading-status){max-width:550px;font-size:18px;margin:0 0 20px}
 .trading-status{display:flex;align-items:center;gap:9px;width:fit-content;padding:10px 14px;border-radius:50px;background:#edf7f2;color:#245b44!important;font-size:13px;font-weight:700;margin:0 0 18px}
 .trading-status span{width:9px;height:9px;border-radius:50%;background:#3ca778}
-.trading-hero-art{height:370px;border-radius:18px;position:relative;overflow:hidden;background:radial-gradient(circle at center,#f1f8ff 5%,#dceafd 68%,#cbdcf2 100%)}
-.trading-hero-orbit{position:absolute;left:50%;top:50%;border:1px solid #a7c6e9;border-radius:50%;transform:translate(-50%,-50%)}
-.orbit-one{width:210px;height:210px}.orbit-two{width:305px;height:305px}
-.trading-hero-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:110px;height:110px;border-radius:28px;background:#113b6b;color:#fff;font:600 58px/1 'Fraunces',Georgia,serif;box-shadow:12px 18px 35px #163d7240}
-.trading-hero-chip{position:absolute;z-index:1;padding:9px 15px;border-radius:50px;background:#fff;border:1px solid #bed5ee;color:#255381;font-size:13px;font-weight:700;box-shadow:0 8px 18px #214d7e20}
-.chip-research{left:9%;top:20%}.chip-risk{right:9%;top:24%}.chip-review{left:17%;bottom:16%}
 .trading-flow,.trading-boundaries,.trading-learning{padding-block:68px 78px}
 .trading-flow h2,.trading-boundaries h2,.trading-learning h2{font-size:clamp(31px,3.5vw,43px);line-height:1.16;margin:0 0 17px}
 .trading-section-intro{max-width:710px;font-size:17px;margin:0 0 35px}
@@ -90,17 +78,9 @@
 .trading-fine-print{font-size:12px!important;margin-top:30px!important;color:#62718a!important}
 /* Motion shows direction and selection without hiding any content. */
 .project-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.project-card:hover,.project-card:focus-within{transform:translateY(-4px);border-color:#b7cee9;box-shadow:0 20px 45px #163a6818}
-.project-card-art img,.project-card-art .lab-glyph{transition:transform .35s ease}
-.project-card:hover .azure-card-art img,.project-card:focus-within .azure-card-art img{transform:scale(1.035)}
-.project-card:hover .lab-glyph,.project-card:focus-within .lab-glyph{transform:rotate(-8deg) scale(1.045)}
-.trading-art-path{position:relative}
-.trading-art-path:after{content:'';position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:#1765b6;animation:travel 3.6s ease-in-out infinite}
-.trading-art-path:nth-of-type(4):after{animation-delay:1.8s}
-.lab-device-light{animation:ledPulse 3.8s ease-in-out infinite}
-.trading-hero-orbit:after{content:'';position:absolute;top:-5px;left:calc(50% - 5px);width:10px;height:10px;border-radius:50%;background:#4689d1;box-shadow:0 0 0 6px #4689d126}
-.orbit-one{animation:orbitSpin 20s linear infinite}
-.orbit-two{animation:orbitSpin 32s linear reverse infinite}
+.project-card:has(.project-card-copy:hover),.project-card:focus-within{transform:translateY(-4px);border-color:#b7cee9;box-shadow:0 20px 45px #163a6818}
+.project-card-art img{transition:transform .35s ease}
+.project-card:has(.project-card-copy:hover) .project-card-art img,.project-card:focus-within .project-card-art img{transform:scale(1.035)}
 .lab-map-node{font:inherit;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
 .lab-map-node:hover{transform:translateY(-3px);border-color:#7dabdc;box-shadow:0 10px 24px #12376319}
 .lab-map-node:focus-visible,.agent-explore:focus-visible{outline:3px solid #0759e6;outline-offset:3px}
@@ -120,18 +100,14 @@
 .agent-detail{grid-template-columns:175px 1fr;background:#f2f7ff;border-color:#d1e3f6}
 .agent-detail p.agent-detail-boundary{margin-top:10px;color:#234b76}
 .agent-detail-boundary strong{color:#123b6b}
-@keyframes ledPulse{50%{opacity:.55;box-shadow:0 0 3px #8fe0ba}}
-@keyframes orbitSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes travel{0%,10%{left:0;opacity:0}25%{opacity:1}75%{opacity:1}90%,100%{left:calc(100% - 8px);opacity:0}}
 @media(max-width:760px){
  .projects-intro{padding-block:54px 40px}
  .project-card{grid-template-columns:1fr}
  .project-card-copy{padding:35px 30px}
  .project-card-art{min-height:220px}
- .azure-card-art img{width:min(58%,260px)}
- .lab-glyph{font-size:95px}
+ .project-card-art img{width:min(70%,310px)}
  .lab-hero{grid-template-columns:1fr;gap:32px;padding-block:42px 58px}
- .lab-hero-art{height:280px}
+ .lab-hero-art,.trading-hero-art{width:min(100%,420px);justify-self:center}
  .lab-story,.lab-lessons{padding-block:50px}
  .lab-map{display:grid;grid-template-columns:1fr;justify-items:stretch;padding:20px}
  .lab-map-node{min-height:96px}
@@ -139,11 +115,7 @@
  .lab-lessons-grid{grid-template-columns:1fr;gap:26px}
  .lab-note{display:block;padding-block:45px}
  .lab-note>.text-link{margin-top:18px}
- .trading-card-art{min-height:210px}
- .trading-art-node{min-width:75px;min-height:75px;font-size:11px}
- .trading-art-path{width:15px}
  .trading-hero{grid-template-columns:1fr;gap:26px;padding-block:42px 56px}
- .trading-hero-art{height:285px}
  .trading-flow,.trading-boundaries,.trading-learning{padding-block:50px}
  .agent-flow{grid-template-columns:1fr;gap:12px}
  .agent-flow li{min-height:0;padding:20px 22px}
