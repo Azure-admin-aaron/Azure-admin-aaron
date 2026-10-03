@@ -46,6 +46,7 @@ h1,h2,h3,.hero h1,.mock-page h1,.mock-page h2,.mock-page h3,.portfolio-header .p
 .project-copy>p.project-explore-note{margin-top:14px;color:var(--body);font-size:13px;line-height:1.5}
 
 /* Current focus */
+.current-focus .focus-intro{max-width:680px;margin:0 0 28px;color:var(--body);font-size:16px;line-height:1.7}
 .work-detail{border-top:0;padding-top:20px}
 .work-detail h2{font-size:clamp(28px,3.4vw,34px);font-weight:600}
 .contribution-grid h3{font-size:21px}
