@@ -52,6 +52,42 @@
 .lab-note p a{color:#0759e6;text-decoration:underline;text-underline-offset:3px}
 .lab-note>.text-link{white-space:nowrap}
 .current-focus .text-link{font-size:15px;min-height:0}
+.trading-card-art{display:flex;gap:10px;align-items:center;justify-content:center;background:linear-gradient(140deg,#eaf3ff,#dce9f9);padding:30px}
+.trading-art-node{display:grid;place-items:center;min-width:88px;min-height:88px;padding:10px;border:1px solid #a9c2e1;border-radius:50%;background:#fff;color:#1b477b;font-size:13px;font-weight:700;text-align:center;box-shadow:0 10px 24px #18437414}
+.trading-art-brake{background:#174d89;color:#fff;border-color:#174d89}
+.trading-art-path{width:23px;height:2px;background:#7aa5d5;flex:none}
+.trading-hero{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:52px;min-height:555px;padding-block:72px 84px}
+.trading-hero h1{font-size:clamp(42px,4.8vw,65px);line-height:1.06;margin:0 0 20px}
+.trading-hero p:not(.section-label):not(.trading-status){max-width:550px;font-size:18px;margin:0 0 20px}
+.trading-status{display:flex;align-items:center;gap:9px;width:fit-content;padding:10px 14px;border-radius:50px;background:#edf7f2;color:#245b44!important;font-size:13px;font-weight:700;margin:0 0 18px}
+.trading-status span{width:9px;height:9px;border-radius:50%;background:#3ca778}
+.trading-hero-art{height:370px;border-radius:18px;position:relative;overflow:hidden;background:radial-gradient(circle at center,#f1f8ff 5%,#dceafd 68%,#cbdcf2 100%)}
+.trading-hero-orbit{position:absolute;left:50%;top:50%;border:1px solid #a7c6e9;border-radius:50%;transform:translate(-50%,-50%)}
+.orbit-one{width:210px;height:210px}.orbit-two{width:305px;height:305px}
+.trading-hero-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:110px;height:110px;border-radius:28px;background:#113b6b;color:#fff;font:600 58px/1 'Fraunces',Georgia,serif;box-shadow:12px 18px 35px #163d7240}
+.trading-hero-chip{position:absolute;z-index:1;padding:9px 15px;border-radius:50px;background:#fff;border:1px solid #bed5ee;color:#255381;font-size:13px;font-weight:700;box-shadow:0 8px 18px #214d7e20}
+.chip-research{left:9%;top:20%}.chip-risk{right:9%;top:24%}.chip-review{left:17%;bottom:16%}
+.trading-flow,.trading-boundaries,.trading-learning{padding-block:68px 78px}
+.trading-flow h2,.trading-boundaries h2,.trading-learning h2{font-size:clamp(31px,3.5vw,43px);line-height:1.16;margin:0 0 17px}
+.trading-section-intro{max-width:710px;font-size:17px;margin:0 0 35px}
+.agent-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}
+.agent-flow li{min-height:205px;padding:25px 26px;border:1px solid #d8e3f0;border-radius:10px;background:#f8fbff}
+.agent-flow li.agent-gate{background:#eaf3fe;border-color:#a9c9ee}
+.agent-number{color:#3572b8;font-size:12px;font-weight:700;letter-spacing:.13em}
+.agent-flow h3{font-size:23px;margin:21px 0 8px}
+.agent-flow p{font-size:14.5px;margin:0}
+.agent-chief{max-width:820px;margin:22px 0 0;padding:17px 22px;border-left:3px solid #4c8dd1;background:#f3f8ff;font-size:15px}
+.agent-chief strong{color:var(--lab-ink)}
+.trading-boundaries{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}
+.trading-boundaries-intro p:not(.section-label){font-size:17px;margin:0}
+.trading-guardrails{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.trading-guardrails article{border-top:2px solid #144a82;padding-top:17px}
+.trading-guardrails h3{font-size:21px;margin:0 0 9px}
+.trading-guardrails p{font-size:14.5px;margin:0}
+.trading-learning{max-width:1040px}
+.trading-learning p:not(.section-label){max-width:750px;font-size:17px;margin:0 0 16px}
+.trading-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.trading-fine-print{font-size:12px!important;margin-top:30px!important;color:#62718a!important}
 @media(max-width:760px){
  .projects-intro{padding-block:54px 40px}
  .project-card{grid-template-columns:1fr}
@@ -68,4 +104,16 @@
  .lab-lessons-grid{grid-template-columns:1fr;gap:26px}
  .lab-note{display:block;padding-block:45px}
  .lab-note>.text-link{margin-top:18px}
+ .trading-card-art{min-height:210px}
+ .trading-art-node{min-width:75px;min-height:75px;font-size:11px}
+ .trading-art-path{width:15px}
+ .trading-hero{grid-template-columns:1fr;gap:26px;padding-block:42px 56px}
+ .trading-hero-art{height:285px}
+ .trading-flow,.trading-boundaries,.trading-learning{padding-block:50px}
+ .agent-flow{grid-template-columns:1fr;gap:12px}
+ .agent-flow li{min-height:0;padding:20px 22px}
+ .agent-flow h3{margin-top:12px}
+ .trading-boundaries{grid-template-columns:1fr;gap:30px}
+ .trading-guardrails{gap:19px}
 }
+@media(max-width:400px){.trading-guardrails{grid-template-columns:1fr}}
