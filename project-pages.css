@@ -62,7 +62,6 @@
 .trading-section-intro{max-width:710px;font-size:17px;margin:0 0 35px}
 .agent-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}
 .agent-flow li{min-height:205px;padding:25px 26px;border:1px solid #d8e3f0;border-radius:10px;background:#f8fbff}
-.agent-flow li.agent-gate{background:#eaf3fe;border-color:#a9c9ee}
 .agent-number{color:#3572b8;font-size:12px;font-weight:700;letter-spacing:.13em}
 .agent-flow h3{font-size:23px;margin:21px 0 8px}
 .agent-flow p{font-size:14.5px;margin:0}
@@ -94,6 +93,7 @@
 .lab-step-detail h3,.agent-detail h3{font-size:22px;margin:0 0 7px}
 .lab-step-detail p,.agent-detail p{font-size:15px;margin:0;max-width:710px}
 .agent-flow li{display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.agent-flow li{cursor:pointer}
 .agent-flow li:hover{transform:translateY(-2px);border-color:#a8c7e7}
 .agent-flow li.is-active{border-color:#4b8fda;box-shadow:0 12px 26px #0759e619;background:#edf6ff}
 .agent-flow li p{flex:1}
