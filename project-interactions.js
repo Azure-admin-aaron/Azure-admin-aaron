@@ -36,6 +36,12 @@
     }));
   }
 
+  document.querySelectorAll('.project-card-copy').forEach((copy) => copy.addEventListener('pointermove', (event) => {
+    const box = copy.getBoundingClientRect();
+    copy.style.setProperty('--mx', `${event.clientX - box.left}px`);
+    copy.style.setProperty('--my', `${event.clientY - box.top}px`);
+  }));
+
   const agentSteps = [
     {
       title: 'A shortlist, not an instruction',
