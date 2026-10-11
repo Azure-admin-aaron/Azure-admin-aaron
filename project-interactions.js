@@ -74,8 +74,14 @@
   if (agentButtons.length === agentSteps.length && agentDetail) {
     agentButtons.forEach((button, index) => {
       // The whole card selects its role; the button stays the keyboard and screen-reader control.
-      button.closest('li').addEventListener('click', (event) => {
-        if (event.target.closest('button') !== button && !event.target.closest('button')) button.click();
+      const card = button.closest('li');
+      card.addEventListener('pointermove', (event) => {
+        const box = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${event.clientX - box.left}px`);
+        card.style.setProperty('--my', `${event.clientY - box.top}px`);
+      });
+      card.addEventListener('click', (event) => {
+        if (!event.target.closest('button')) button.click();
       });
     });
     agentButtons.forEach((button, index) => button.addEventListener('click', () => {
