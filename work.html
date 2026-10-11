@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="lz-mobile.css?v=1">
   <script src="navigation.js?v=2" defer></script>
   <script src="lz-viewer.js?v=8" defer></script>
+<link rel="stylesheet" href="polish.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -87,6 +88,30 @@
       </dialog>
     </section>
 
+    <section class="code-sample wrap section-rule" aria-labelledby="code-title">
+      <h2 id="code-title">What it looks like as code.</h2>
+      <p>Every platform change is a Bicep file in GitHub, checked with what-if before it deploys. This is a small illustration of the pattern: a private DNS zone linked to a hub network.</p>
+      <figure class="code-card">
+        <figcaption><span>private-dns.bicep</span><span class="code-note">Illustrative example, not production code</span><button type="button" class="code-copy" aria-label="Copy Bicep example">Copy</button></figcaption>
+<pre><code><span class="k">param</span> hubVnetId <span class="t">string</span>
+
+<span class="k">resource</span> zone <span class="s">'Microsoft.Network/privateDnsZones@2020-06-01'</span> = {
+  name: <span class="s">'privatelink.azurestaticapps.net'</span>
+  location: <span class="s">'global'</span>
+}
+
+<span class="k">resource</span> hubLink <span class="s">'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01'</span> = {
+  parent: zone
+  name: <span class="s">'hub-link'</span>
+  location: <span class="s">'global'</span>
+  properties: {
+    virtualNetwork: { id: hubVnetId }
+    registrationEnabled: <span class="k">false</span>
+  }
+}</code></pre>
+      </figure>
+    </section>
+
     <section class="hands-on wrap section-rule" id="hands-on" aria-labelledby="hands-on-title">
       <h2 id="hands-on-title">What shaped the decisions.</h2>
       <div class="hands-on-grid">
@@ -110,5 +135,6 @@
   </main>
   <footer class="site-footer wrap"><span>© <span id="year">2026</span> Aaron Petty</span><a href="#top">Back to top ↑</a></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>document.querySelector('.code-copy')?.addEventListener('click',async e=>{const b=e.currentTarget;try{await navigator.clipboard.writeText(document.querySelector('.code-card code').innerText);b.textContent='Copied'}catch{getSelection().selectAllChildren(document.querySelector('.code-card code'));b.textContent='Selected: press Ctrl+C'}setTimeout(()=>b.textContent='Copy',1800)})</script>
 </body>
 </html>
