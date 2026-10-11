@@ -95,11 +95,16 @@
 .agent-flow li{display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
 .agent-flow li{cursor:pointer}
 .agent-flow li:hover{transform:translateY(-2px);border-color:#a8c7e7}
-.agent-flow li.is-active{border-color:#4b8fda;box-shadow:0 12px 26px #0759e619;background:#edf6ff}
+.agent-flow li.is-active{border-color:#4b8fda;box-shadow:0 12px 26px #0759e619}
+/* Hover glow: a soft palette-blue gradient that follows the cursor (--mx/--my set in project-interactions.js). */
+.agent-flow li{position:relative;isolation:isolate;overflow:hidden}
+.agent-flow li:before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .25s ease;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#4b8fda33,#0759e60d 55%,transparent 75%)}
+.agent-flow li:hover:before{opacity:1}
 .agent-flow li p{flex:1}
 .agent-explore{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;min-height:40px;margin-top:15px;padding:0;border:0;background:transparent;color:#0759e6;font:600 13px/1.3 'DM Sans',Arial,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .agent-explore:hover{color:#003b9b}
 .agent-detail{grid-template-columns:175px 1fr;background:#f2f7ff;border-color:#d1e3f6}
+.agent-detail-count{white-space:normal;line-height:1.5}
 .agent-detail p.agent-detail-boundary{margin-top:10px;color:#234b76}
 .agent-detail-boundary strong{color:#123b6b}
 @media(max-width:760px){
