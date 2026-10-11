@@ -136,3 +136,8 @@
 }
 @media(max-width:400px){.trading-guardrails{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.project-pages *, .project-pages *:before, .project-pages *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.trading-guardrails article{transition:transform .2s ease,border-color .2s ease}
+.trading-guardrails article:hover{transform:translateY(-3px);border-top-color:#0759e6}
+@media(prefers-reduced-motion:reduce){.trading-guardrails article{transition:none}.trading-guardrails article:hover{transform:none}}
+.project-card-copy h2{text-wrap:balance}

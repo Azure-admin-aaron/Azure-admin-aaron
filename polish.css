@@ -1,7 +1,6 @@
 /* Tags */
 .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0}
 .tags li{font:600 12px/1 'DM Sans',Arial,sans-serif;letter-spacing:.01em;color:#2a4f8f;background:#e7f0ff;border:1px solid #cfe0fb;border-radius:999px;padding:6px 10px}
-.project-copy>.tags{margin:0 0 26px}
 /* Tile hovers (cards are not links, so lift only: no arrow, no pointer) */
 .expertise-columns article,.hands-on-grid article{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .expertise-columns article:hover{transform:translateY(-3px);border-top-color:var(--blue,#0759e6)}
@@ -20,3 +19,12 @@
 .code-card pre{margin:0;padding:20px 22px;overflow-x:auto;color:#dbe7ff;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .code-card .k{color:#7ab4ff}.code-card .s{color:#9fe0b4}.code-card .t{color:#f5c883}
 @media(max-width:650px){.code-note{display:none}.code-card pre{font-size:12.5px}}
+/* Balanced headlines avoid a lone last word on phones. */
+h1,.mock-hero h1{text-wrap:balance}
+/* Expertise cards share rows (heading, text, tags) so they line up even when a heading wraps. */
+@media(min-width:851px){
+.expertise-columns{grid-template-rows:auto auto auto}
+.expertise-columns article{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;align-content:start}
+.expertise-columns .tags{align-self:start}
+.expertise-columns .column-heading{align-items:flex-start}
+}
