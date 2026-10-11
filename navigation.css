@@ -17,7 +17,8 @@ html{scroll-padding-top:104px}
 .portfolio-header a:focus-visible{outline:3px solid #0759e6;outline-offset:4px;border-radius:3px}
 @media(max-width:960px){.portfolio-header .navigation-inner{width:calc(100% - 64px)}}
 @media(max-width:760px){
- html{scroll-padding-top:120px}
+ html{scroll-padding-top:16px}
+ .portfolio-header{position:static}
  .portfolio-header .navigation-inner{width:calc(100% - 32px);min-height:0;padding-top:10px;gap:2px;flex-wrap:wrap}
  .portfolio-header.is-compact .navigation-inner{min-height:0;padding-top:6px}
  .portfolio-header .portfolio-nav{width:100%;justify-content:space-between;gap:4px;padding-bottom:10px}
