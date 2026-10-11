@@ -8,6 +8,9 @@
 .project-list{display:grid;gap:24px;padding-bottom:80px}
 .project-card{display:grid;grid-template-columns:1.15fr 1fr;min-height:350px;border:1px solid #dce5f1;border-radius:12px;overflow:hidden;background:#fff}
 .project-card-copy{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:50px 54px;color:var(--lab-ink)}
+.project-card-copy{isolation:isolate}
+.project-card-copy:before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .25s ease;background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%),#4b8fda33,#0759e60d 55%,transparent 75%)}
+.project-card-copy:hover:before{opacity:1}
 .project-card-copy:focus-within{outline:3px solid #0759e6;outline-offset:-7px;border-radius:7px}
 .project-card-copy h2{font-size:clamp(29px,3vw,39px);line-height:1.13;margin:0 0 16px}
 .project-card-copy>p:not(.section-label){max-width:470px;margin:0 0 20px;font-size:16px}
